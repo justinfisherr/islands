@@ -5,29 +5,13 @@ import * as THREE from "three";
 
 const PALETTE = ["#4fc3a1", "#ff9d4d", "#6cc4ff", "#ff6b9d", "#b39ddb", "#ffd54f", "#81d4fa"];
 
-function lerp(a, b, t) {
-  return a + (b - a) * t;
-}
-
-// health 0..1 -> 0..1, but deliberately steep: mid-health stays brown.
-function greenness(health) {
-  return Math.pow(health, 2.5);
-}
-
-function grassColor(health) {
-  const g = greenness(health);
-  const r = Math.round(lerp(176, 63, g));
-  const gg = Math.round(lerp(138, 143, g));
-  const b = Math.round(lerp(99, 79, g));
-  return `rgb(${r}, ${gg}, ${b})`;
-}
-
-function leafColor(health) {
-  const g = greenness(health);
-  const r = Math.round(lerp(95, 31, g));
-  const gg = Math.round(lerp(157, 107, g));
-  const b = Math.round(lerp(103, 58, g));
-  return `rgb(${r}, ${gg}, ${b})`;
+function mulberry32(seed) {
+  return function () {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
 }
 
 function domainStats(domain) {
@@ -38,21 +22,43 @@ function domainStats(domain) {
   return { size, health };
 }
 
+// Health -> a full island "theme", from scorched lava up to waterfall paradise.
+function islandTheme(health) {
+  const h = Math.max(0, Math.min(1, health));
+
+  let rock, ground;
+  if (h < 0.2) { rock = "#26221f"; ground = "#3a2b22"; }
+  else if (h < 0.35) { rock = "#4a3a2e"; ground = "#6e5038"; }
+  else if (h < 0.5) { rock = "#6b513a"; ground = "#8a6a44"; }
+  else if (h < 0.65) { rock = "#6b5c42"; ground = "#9c9266"; }
+  else if (h < 0.8) { rock = "#5e6a44"; ground = "#6fae66"; }
+  else { rock = "#3f5c3f"; ground = "#38a148"; }
+
+  const lava = h < 0.25 ? (0.25 - h) / 0.25 : 0;          // 1 -> 0 as health rises to .25
+  const waterfall = h > 0.85 ? (h - 0.85) / 0.15 : 0;       // 0 -> 1 from .85 to 1
+
+  let treeCount = 0;
+  if (h >= 0.25 && h < 0.5) treeCount = Math.round((h - 0.25) * 8);      // 0..2
+  else if (h >= 0.5) treeCount = Math.round(2 + (h - 0.5) * 14);         // 2..9
+
+  return { rock, ground, lava, waterfall, treeCount };
+}
+
 function Island({ domain, index, position, selected, onSelect }) {
   const { size, health } = domainStats(domain);
+  const theme = islandTheme(health);
   const scale = 0.8 + Math.sqrt(size) * 0.15;
-  const treeCount = Math.max(1, Math.round(health * 6));
   const color = PALETTE[index % PALETTE.length];
 
   const trees = useMemo(() => {
     const out = [];
-    for (let i = 0; i < treeCount; i++) {
-      const a = (i / treeCount) * Math.PI * 2 + i;
-      const rad = 0.5 + ((i * 37) % 100) / 100 * 1.3;
-      out.push({ p: [Math.cos(a) * rad, 0, Math.sin(a) * rad], s: 0.5 + ((i * 53) % 100) / 100 * 0.5 });
+    for (let i = 0; i < theme.treeCount; i++) {
+      const a = (i / Math.max(1, theme.treeCount)) * Math.PI * 2 + i * 1.3;
+      const rad = 0.5 + ((i * 37) % 100) / 100 * 1.4;
+      out.push({ p: [Math.cos(a) * rad, 0, Math.sin(a) * rad], s: 0.5 + ((i * 53) % 100) / 100 * 0.55 });
     }
     return out;
-  }, [treeCount]);
+  }, [theme.treeCount]);
 
   return (
     <group
@@ -63,14 +69,29 @@ function Island({ domain, index, position, selected, onSelect }) {
         onSelect(domain.id);
       }}
     >
+      {/* rock */}
       <mesh position={[0, -1.5, 0]} rotation={[Math.PI, 0, 0]}>
         <coneGeometry args={[2.4, 4.2, 8, 4]} />
-        <meshStandardMaterial color="#7a6149" flatShading roughness={1} />
+        <meshStandardMaterial color={theme.rock} flatShading roughness={1} />
       </mesh>
+      {/* ground */}
       <mesh position={[0, 0.55, 0]}>
         <cylinderGeometry args={[2.4, 2.3, 0.62, 12]} />
-        <meshStandardMaterial color={grassColor(health)} flatShading roughness={0.9} />
+        <meshStandardMaterial color={theme.ground} flatShading roughness={0.9} />
       </mesh>
+
+      {/* lava pool for the lowest-health islands */}
+      {theme.lava > 0 && (
+        <>
+          <mesh position={[0, 0.9, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+            <circleGeometry args={[1.3, 20]} />
+            <meshStandardMaterial color="#ff5c1a" emissive="#ff3d00" emissiveIntensity={2.2} roughness={0.25} />
+          </mesh>
+          <pointLight position={[0, 1.4, 0]} color="#ff6b2a" intensity={2.5 * theme.lava} distance={5} />
+        </>
+      )}
+
+      {/* trees */}
       {trees.map((t, i) => (
         <group key={i} position={t.p} scale={t.s}>
           <mesh position={[0, 0.45, 0]}>
@@ -79,20 +100,33 @@ function Island({ domain, index, position, selected, onSelect }) {
           </mesh>
           <mesh position={[0, 1.1, 0]}>
             <coneGeometry args={[0.5, 0.7, 6]} />
-            <meshStandardMaterial color={leafColor(health)} flatShading roughness={0.95} />
+            <meshStandardMaterial color="#2e7d3a" flatShading roughness={0.95} />
           </mesh>
         </group>
       ))}
+
+      {/* waterfall for the highest-health islands */}
+      {theme.waterfall > 0 && (
+        <group>
+          <mesh position={[1.3, -0.6, 0]}>
+            <boxGeometry args={[0.35, 3.6, 0.12]} />
+            <meshStandardMaterial color="#7fd6e8" transparent opacity={0.75} roughness={0.2} />
+          </mesh>
+          <mesh position={[1.3, 1.1, 0]}>
+            <sphereGeometry args={[0.9, 12, 12]} />
+            <meshStandardMaterial color="#ffffff" transparent opacity={0.28} roughness={0.4} />
+          </mesh>
+        </group>
+      )}
+
+      {/* marker orb */}
       <mesh position={[0, 2.4, 0]}>
         <sphereGeometry args={[0.28, 16, 16]} />
         <meshStandardMaterial color={color} emissive={color} emissiveIntensity={selected ? 2.4 : 0.7} />
       </mesh>
 
       <Html center distanceFactor={22} position={[0, 3.2, 0]}>
-        <button
-          className={`island-label ${selected ? "active" : ""}`}
-          onClick={() => onSelect(domain.id)}
-        >
+        <button className={`island-label ${selected ? "active" : ""}`} onClick={() => onSelect(domain.id)}>
           {domain.name}
           <span className="count">{size}</span>
         </button>
@@ -125,12 +159,22 @@ export default function App() {
 
   const domains = data?.domains || [];
 
+  // random-but-traversable scatter: seeded, with minimum spacing
   const positions = useMemo(() => {
     const n = domains.length || 1;
-    return domains.map((_, i) => {
-      const a = (i / n) * Math.PI * 2;
-      return [Math.cos(a) * 12, 0, Math.sin(a) * 12];
-    });
+    const rng = mulberry32(20261010);
+    const pts = [];
+    let attempts = 0;
+    while (pts.length < n && attempts < 2000) {
+      const a = rng() * Math.PI * 2;
+      const rad = 5 + rng() * 13;
+      const p = [Math.cos(a) * rad, 0, Math.sin(a) * rad];
+      const minDist = 8.5;
+      const ok = pts.every((q) => Math.hypot(p[0] - q[0], p[2] - q[2]) >= minDist);
+      if (ok) pts.push(p);
+      attempts++;
+    }
+    return pts;
   }, [domains]);
 
   const selectedDomain = domains.find((d) => d.id === selected) || null;
@@ -153,20 +197,20 @@ export default function App() {
       <Canvas
         shadows
         dpr={[1, 2]}
-        camera={{ position: [0, 22, 20], fov: 50 }}
+        camera={{ position: [0, 26, 24], fov: 52 }}
         onPointerMissed={() => {
           setSelected(null);
           setFocus(new THREE.Vector3(0, 0, 0));
         }}
       >
         <color attach="background" args={["#7ec8e3"]} />
-        <fog attach="fog" args={["#7ec8e3", 30, 90]} />
+        <fog attach="fog" args={["#7ec8e3", 40, 110]} />
         <hemisphereLight args={["#ffffff", "#4a6b5a", 1.0]} />
-        <directionalLight position={[10, 20, 8]} intensity={2.0} color="#fff2d8" castShadow shadow-mapSize={[1024, 1024]} />
+        <directionalLight position={[14, 28, 10]} intensity={2.0} color="#fff2d8" castShadow shadow-mapSize={[2048, 2048]} />
         <ambientLight intensity={0.35} />
 
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2.5, 0]}>
-          <circleGeometry args={[40, 48]} />
+          <circleGeometry args={[90, 64]} />
           <meshStandardMaterial color="#2e7fb0" roughness={0.9} />
         </mesh>
 
@@ -184,11 +228,12 @@ export default function App() {
         <CameraRig focus={focus} />
         <OrbitControls
           makeDefault
-          enablePan={false}
-          minDistance={8}
-          maxDistance={55}
-          minPolarAngle={0.25}
-          maxPolarAngle={1.45}
+          enablePan
+          screenSpacePanning={false}
+          minDistance={6}
+          maxDistance={70}
+          minPolarAngle={0.2}
+          maxPolarAngle={1.5}
           enableDamping
           dampingFactor={0.08}
           target={[0, 0, 0]}
@@ -199,7 +244,7 @@ export default function App() {
         <div className="title">
           <h1>Korean <em>Islands</em></h1>
           <p className="sub">
-            {data ? `${data.total_words} words · ${Math.round(data.overall_health * 100)}% healthy · drag to orbit, tap an island` : "Loading…"}
+            {data ? `${data.total_words} words · ${Math.round(data.overall_health * 100)}% healthy · drag to orbit, pinch to zoom` : "Loading…"}
           </p>
         </div>
 
@@ -220,7 +265,7 @@ export default function App() {
               );
             })}
           </div>
-          <p className="hint">Drag to orbit · scroll/pinch to zoom</p>
+          <p className="hint">Drag to orbit · right-drag / two-finger to travel · scroll to zoom</p>
         </div>
       </div>
 
