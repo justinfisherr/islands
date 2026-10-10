@@ -1,0 +1,131 @@
+{
+  "domains": [
+    {
+      "id": "everyday",
+      "name": "Everyday Life",
+      "name_native": "일상생활",
+      "islands": [
+        {
+          "id": "feelings",
+          "name": "Feelings & States",
+          "name_native": "감정",
+          "terms": ["슬프다", "기뻐하다", "긴장되다", "뿌듯하다", "기대되다", "반갑다", "편하다", "마음에 들다", "고민하다", "바라다", "원하다", "아무런", "흐려요"]
+        },
+        {
+          "id": "time",
+          "name": "Time & Frequency",
+          "name_native": "시간",
+          "terms": ["오전", "저녁", "다음", "저번", "드디어", "점점", "자주", "바로", "바로바로", "잠깐", "금세", "먼저", "오래되다", "새롭다"]
+        },
+        {
+          "id": "home",
+          "name": "Home",
+          "name_native": "집",
+          "terms": ["침대", "냉장고", "이사", "입구", "텅", "씻어요", "누르다"]
+        },
+        {
+          "id": "people",
+          "name": "People",
+          "name_native": "사람",
+          "terms": ["여자친구", "한국인", "모두"]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "name": "Food",
+      "name_native": "음식",
+      "islands": [
+        {
+          "id": "food",
+          "name": "Food & Drinks",
+          "name_native": "음식",
+          "terms": ["계란", "꿀", "옥수수", "포도", "접시", "달콤해요", "상큼해요"]
+        },
+        {
+          "id": "cooking",
+          "name": "Cooking & Eating",
+          "name_native": "요리",
+          "terms": ["끓여요", "씹다", "까요", "따라요"]
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping",
+      "name_native": "쇼핑",
+      "islands": [
+        {
+          "id": "shops",
+          "name": "Shops & Money",
+          "name_native": "상점·돈",
+          "terms": ["가게", "매장", "시장", "돈", "사다", "싸다", "주문하다", "고르다", "최애", "인증샷", "봉지"]
+        }
+      ]
+    },
+    {
+      "id": "clothing",
+      "name": "Clothing",
+      "name_native": "옷",
+      "islands": [
+        {
+          "id": "clothing",
+          "name": "Clothing & Colors",
+          "name_native": "옷·색",
+          "terms": ["입다", "신다", "껴요", "갈아입어요", "양말", "파란색", "검은색"]
+        }
+      ]
+    },
+    {
+      "id": "movement",
+      "name": "Movement",
+      "name_native": "이동",
+      "islands": [
+        {
+          "id": "getting-around",
+          "name": "Getting Around",
+          "name_native": "이동",
+          "terms": ["가다", "오다", "내리다", "따라가다", "걸어서", "서다", "비키다", "등산", "구경", "절"]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "name_native": "소통",
+      "islands": [
+        {
+          "id": "talking",
+          "name": "Talking",
+          "name_native": "대화",
+          "terms": ["말하다", "이야기", "묻다", "소개하다", "소리", "언어", "대하다"]
+        },
+        {
+          "id": "grammar",
+          "name": "Grammar & Connectives",
+          "name_native": "문법",
+          "terms": ["거예요", "예", "혹은", "하나", "따르다"]
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "name": "Core Words",
+      "name_native": "핵심",
+      "islands": [
+        {
+          "id": "verbs",
+          "name": "Core Verbs",
+          "name_native": "동사",
+          "terms": ["되다", "주다", "쓰다", "모으다", "필요하다", "해 보다", "바르다", "떠지다", "불다", "쉬다"]
+        },
+        {
+          "id": "descriptions",
+          "name": "Descriptions",
+          "name_native": "형용사",
+          "terms": ["크다", "작다", "느리다", "다양하다", "선택", "문화"]
+        }
+      ]
+    }
+  ]
+}
