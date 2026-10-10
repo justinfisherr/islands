@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-10T22:20:02.447378+00:00",
+  "generated_at": "2026-10-10T22:26:45.695205+00:00",
   "deck": "Korean-lingq",
   "total_words": 122,
-  "overall_health": 0.541,
+  "overall_health": 0.3,
   "domains": [
     {
       "id": "everyday",
@@ -14,7 +14,7 @@
           "name": "Feelings & States",
           "name_native": "감정",
           "size": 14,
-          "health": 0.574,
+          "health": 0.32,
           "words": [
             {
               "term": "슬프다",
@@ -26,7 +26,7 @@
               "similar": "우울하다",
               "status": "review",
               "interval_days": 12,
-              "health": 0.696
+              "health": 0.493
             },
             {
               "term": "기뻐하다",
@@ -38,7 +38,7 @@
               "similar": "행복하다",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             },
             {
               "term": "긴장되다",
@@ -50,7 +50,7 @@
               "similar": "떨리다",
               "status": "review",
               "interval_days": 7,
-              "health": 0.64
+              "health": 0.4
             },
             {
               "term": "뿌듯하다",
@@ -62,7 +62,7 @@
               "similar": "자랑스럽다, 흐뭇하다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "기대되다",
@@ -74,7 +74,7 @@
               "similar": "기대하다",
               "status": "review",
               "interval_days": 8,
-              "health": 0.654
+              "health": 0.423
             },
             {
               "term": "반갑다",
@@ -86,7 +86,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "편하다",
@@ -98,7 +98,7 @@
               "similar": "편안하다",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             },
             {
               "term": "마음에 들다",
@@ -110,7 +110,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "고민하다",
@@ -122,7 +122,7 @@
               "similar": "걱정하다",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "바라다",
@@ -134,7 +134,7 @@
               "similar": "원하다, 희망하다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "원하다",
@@ -146,7 +146,7 @@
               "similar": "바라다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "아무런",
@@ -158,7 +158,7 @@
               "similar": "아무",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "흐려요",
@@ -170,7 +170,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 8,
-              "health": 0.654
+              "health": 0.423
             },
             {
               "term": "미소",
@@ -182,7 +182,7 @@
               "similar": "웃음",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             }
           ]
         },
@@ -191,7 +191,7 @@
           "name": "Time & Frequency",
           "name_native": "시간",
           "size": 16,
-          "health": 0.548,
+          "health": 0.312,
           "words": [
             {
               "term": "오전",
@@ -203,7 +203,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             },
             {
               "term": "저녁",
@@ -215,7 +215,7 @@
               "similar": "밤",
               "status": "review",
               "interval_days": 5,
-              "health": 0.607
+              "health": 0.345
             },
             {
               "term": "다음",
@@ -227,7 +227,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 18,
-              "health": 0.74
+              "health": 0.566
             },
             {
               "term": "저번",
@@ -239,7 +239,7 @@
               "similar": "지난번",
               "status": "review",
               "interval_days": 11,
-              "health": 0.687
+              "health": 0.478
             },
             {
               "term": "드디어",
@@ -251,7 +251,7 @@
               "similar": "마침내",
               "status": "review",
               "interval_days": 13,
-              "health": 0.705
+              "health": 0.508
             },
             {
               "term": "점점",
@@ -263,7 +263,7 @@
               "similar": "차츰, 갈수록",
               "status": "review",
               "interval_days": 11,
-              "health": 0.687
+              "health": 0.478
             },
             {
               "term": "자주",
@@ -275,7 +275,7 @@
               "similar": "흔히",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             },
             {
               "term": "바로",
@@ -287,7 +287,7 @@
               "similar": "곧, 바로바로, 즉시",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "바로바로",
@@ -299,7 +299,7 @@
               "similar": "바로, 금방",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "잠깐",
@@ -311,7 +311,7 @@
               "similar": "잠시",
               "status": "review",
               "interval_days": 9,
-              "health": 0.666
+              "health": 0.443
             },
             {
               "term": "금세",
@@ -323,7 +323,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "먼저",
@@ -335,7 +335,7 @@
               "similar": "우선, 첫",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "오래되다",
@@ -347,7 +347,7 @@
               "similar": "새롭다",
               "status": "learning",
               "interval_days": 0,
-              "health": 0.35
+              "health": 0.1
             },
             {
               "term": "새롭다",
@@ -359,7 +359,7 @@
               "similar": "새, 오래되다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "제시간",
@@ -371,7 +371,7 @@
               "similar": "정시",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "첫",
@@ -383,7 +383,7 @@
               "similar": "먼저",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             }
           ]
         },
@@ -392,7 +392,7 @@
           "name": "Home",
           "name_native": "집",
           "size": 7,
-          "health": 0.616,
+          "health": 0.36,
           "words": [
             {
               "term": "침대",
@@ -404,7 +404,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 13,
-              "health": 0.705
+              "health": 0.508
             },
             {
               "term": "냉장고",
@@ -416,7 +416,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 9,
-              "health": 0.666
+              "health": 0.443
             },
             {
               "term": "이사",
@@ -428,7 +428,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 12,
-              "health": 0.696
+              "health": 0.493
             },
             {
               "term": "입구",
@@ -440,7 +440,7 @@
               "similar": "출구",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "텅",
@@ -452,7 +452,7 @@
               "similar": "비다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "씻어요",
@@ -464,7 +464,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 9,
-              "health": 0.666
+              "health": 0.443
             },
             {
               "term": "누르다",
@@ -476,7 +476,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             }
           ]
         },
@@ -485,7 +485,7 @@
           "name": "People",
           "name_native": "사람",
           "size": 5,
-          "health": 0.438,
+          "health": 0.238,
           "words": [
             {
               "term": "여자친구",
@@ -497,7 +497,7 @@
               "similar": "남자친구",
               "status": "review",
               "interval_days": 11,
-              "health": 0.687
+              "health": 0.478
             },
             {
               "term": "한국인",
@@ -509,7 +509,7 @@
               "similar": "한국사람",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             },
             {
               "term": "모두",
@@ -521,7 +521,7 @@
               "similar": "전부",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "그들",
@@ -533,7 +533,7 @@
               "similar": "우리",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "친구의 친구",
@@ -545,7 +545,7 @@
               "similar": "지인",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             }
           ]
         },
@@ -554,7 +554,7 @@
           "name": "Body & Health",
           "name_native": "몸·건강",
           "size": 4,
-          "health": 0.15,
+          "health": 0.02,
           "words": [
             {
               "term": "다리",
@@ -566,7 +566,7 @@
               "similar": "팔",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "살",
@@ -578,7 +578,7 @@
               "similar": "몸무게",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "힘",
@@ -590,7 +590,7 @@
               "similar": "근육",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "헬스장",
@@ -602,7 +602,7 @@
               "similar": "운동",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             }
           ]
         },
@@ -611,7 +611,7 @@
           "name": "Work & Study",
           "name_native": "일·공부",
           "size": 3,
-          "health": 0.15,
+          "health": 0.02,
           "words": [
             {
               "term": "교실",
@@ -623,7 +623,7 @@
               "similar": "수업",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "일자리",
@@ -635,7 +635,7 @@
               "similar": "직업",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "배우다",
@@ -647,7 +647,7 @@
               "similar": "공부하다",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             }
           ]
         }
@@ -663,7 +663,7 @@
           "name": "Food & Drinks",
           "name_native": "음식",
           "size": 7,
-          "health": 0.662,
+          "health": 0.437,
           "words": [
             {
               "term": "계란",
@@ -675,7 +675,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 13,
-              "health": 0.705
+              "health": 0.508
             },
             {
               "term": "꿀",
@@ -687,7 +687,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 5,
-              "health": 0.607
+              "health": 0.345
             },
             {
               "term": "옥수수",
@@ -699,7 +699,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 7,
-              "health": 0.64
+              "health": 0.4
             },
             {
               "term": "포도",
@@ -711,7 +711,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 13,
-              "health": 0.705
+              "health": 0.508
             },
             {
               "term": "접시",
@@ -723,7 +723,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 16,
-              "health": 0.727
+              "health": 0.545
             },
             {
               "term": "달콤해요",
@@ -735,7 +735,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 9,
-              "health": 0.666
+              "health": 0.443
             },
             {
               "term": "상큼해요",
@@ -747,7 +747,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 4,
-              "health": 0.586
+              "health": 0.31
             }
           ]
         },
@@ -756,7 +756,7 @@
           "name": "Cooking & Eating",
           "name_native": "요리",
           "size": 4,
-          "health": 0.628,
+          "health": 0.38,
           "words": [
             {
               "term": "끓여요",
@@ -768,7 +768,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 13,
-              "health": 0.705
+              "health": 0.508
             },
             {
               "term": "씹다",
@@ -780,7 +780,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 5,
-              "health": 0.607
+              "health": 0.345
             },
             {
               "term": "까요",
@@ -792,7 +792,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "따라요",
@@ -804,7 +804,7 @@
               "similar": "따라가다",
               "status": "review",
               "interval_days": 7,
-              "health": 0.64
+              "health": 0.4
             }
           ]
         }
@@ -820,7 +820,7 @@
           "name": "Shops & Money",
           "name_native": "상점·돈",
           "size": 11,
-          "health": 0.585,
+          "health": 0.308,
           "words": [
             {
               "term": "가게",
@@ -832,7 +832,7 @@
               "similar": "시장, 매장",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "매장",
@@ -844,7 +844,7 @@
               "similar": "가게, 시장",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "시장",
@@ -856,7 +856,7 @@
               "similar": "가게, 마트, 매장",
               "status": "review",
               "interval_days": 4,
-              "health": 0.586
+              "health": 0.31
             },
             {
               "term": "돈",
@@ -868,7 +868,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "사다",
@@ -880,7 +880,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "싸다",
@@ -892,7 +892,7 @@
               "similar": "비싸다",
               "status": "review",
               "interval_days": 8,
-              "health": 0.654
+              "health": 0.423
             },
             {
               "term": "주문하다",
@@ -904,7 +904,7 @@
               "similar": "시키다",
               "status": "review",
               "interval_days": 5,
-              "health": 0.607
+              "health": 0.345
             },
             {
               "term": "고르다",
@@ -916,7 +916,7 @@
               "similar": "선택하다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "최애",
@@ -928,7 +928,7 @@
               "similar": "최고",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "인증샷",
@@ -940,7 +940,7 @@
               "similar": "사진",
               "status": "review",
               "interval_days": 12,
-              "health": 0.696
+              "health": 0.493
             },
             {
               "term": "봉지",
@@ -952,7 +952,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 12,
-              "health": 0.696
+              "health": 0.493
             }
           ]
         }
@@ -968,7 +968,7 @@
           "name": "Clothing & Colors",
           "name_native": "옷·색",
           "size": 7,
-          "health": 0.652,
+          "health": 0.419,
           "words": [
             {
               "term": "입다",
@@ -980,7 +980,7 @@
               "similar": "신다, 끼다, 갈아입다",
               "status": "review",
               "interval_days": 9,
-              "health": 0.666
+              "health": 0.443
             },
             {
               "term": "신다",
@@ -992,7 +992,7 @@
               "similar": "입다, 끼다, 갈아입다",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "껴요",
@@ -1004,7 +1004,7 @@
               "similar": "갈아입다, 신다, 입다",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "갈아입어요",
@@ -1016,7 +1016,7 @@
               "similar": "끼다, 신다, 입다",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             },
             {
               "term": "양말",
@@ -1028,7 +1028,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 5,
-              "health": 0.607
+              "health": 0.345
             },
             {
               "term": "파란색",
@@ -1040,7 +1040,7 @@
               "similar": "파랗다",
               "status": "review",
               "interval_days": 11,
-              "health": 0.687
+              "health": 0.478
             },
             {
               "term": "검은색",
@@ -1052,7 +1052,7 @@
               "similar": "검다",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             }
           ]
         }
@@ -1068,7 +1068,7 @@
           "name": "Getting Around",
           "name_native": "이동",
           "size": 10,
-          "health": 0.626,
+          "health": 0.377,
           "words": [
             {
               "term": "가다",
@@ -1080,7 +1080,7 @@
               "similar": "오다",
               "status": "review",
               "interval_days": 4,
-              "health": 0.586
+              "health": 0.31
             },
             {
               "term": "오다",
@@ -1092,7 +1092,7 @@
               "similar": "가다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "내리다",
@@ -1104,7 +1104,7 @@
               "similar": "타다",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             },
             {
               "term": "따라가다",
@@ -1116,7 +1116,7 @@
               "similar": "따르다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "걸어서",
@@ -1128,7 +1128,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 13,
-              "health": 0.705
+              "health": 0.508
             },
             {
               "term": "서다",
@@ -1140,7 +1140,7 @@
               "similar": "앉다",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "비키다",
@@ -1152,7 +1152,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 13,
-              "health": 0.705
+              "health": 0.508
             },
             {
               "term": "등산",
@@ -1164,7 +1164,7 @@
               "similar": "등반",
               "status": "review",
               "interval_days": 12,
-              "health": 0.696
+              "health": 0.493
             },
             {
               "term": "구경",
@@ -1176,7 +1176,7 @@
               "similar": "관광",
               "status": "review",
               "interval_days": 11,
-              "health": 0.687
+              "health": 0.478
             },
             {
               "term": "절",
@@ -1188,7 +1188,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             }
           ]
         }
@@ -1204,7 +1204,7 @@
           "name": "Talking",
           "name_native": "대화",
           "size": 7,
-          "health": 0.613,
+          "health": 0.354,
           "words": [
             {
               "term": "말하다",
@@ -1216,7 +1216,7 @@
               "similar": "이야기하다",
               "status": "review",
               "interval_days": 4,
-              "health": 0.586
+              "health": 0.31
             },
             {
               "term": "이야기",
@@ -1228,7 +1228,7 @@
               "similar": "대화, 말, 말하다",
               "status": "review",
               "interval_days": 10,
-              "health": 0.677
+              "health": 0.461
             },
             {
               "term": "묻다",
@@ -1240,7 +1240,7 @@
               "similar": "질문하다",
               "status": "review",
               "interval_days": 11,
-              "health": 0.687
+              "health": 0.478
             },
             {
               "term": "소개하다",
@@ -1252,7 +1252,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "소리",
@@ -1264,7 +1264,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 4,
-              "health": 0.586
+              "health": 0.31
             },
             {
               "term": "언어",
@@ -1276,7 +1276,7 @@
               "similar": "말",
               "status": "review",
               "interval_days": 4,
-              "health": 0.586
+              "health": 0.31
             },
             {
               "term": "대하다",
@@ -1288,7 +1288,7 @@
               "similar": "관하다",
               "status": "review",
               "interval_days": 5,
-              "health": 0.607
+              "health": 0.345
             }
           ]
         },
@@ -1297,7 +1297,7 @@
           "name": "Grammar & Connectives",
           "name_native": "문법",
           "size": 6,
-          "health": 0.505,
+          "health": 0.247,
           "words": [
             {
               "term": "거예요",
@@ -1309,7 +1309,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "예",
@@ -1321,7 +1321,7 @@
               "similar": "보기",
               "status": "review",
               "interval_days": 7,
-              "health": 0.64
+              "health": 0.4
             },
             {
               "term": "혹은",
@@ -1333,7 +1333,7 @@
               "similar": "또는",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "하나",
@@ -1345,7 +1345,7 @@
               "similar": "한",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "따르다",
@@ -1357,7 +1357,7 @@
               "similar": "따라가다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "어쩌면",
@@ -1369,7 +1369,7 @@
               "similar": "아마",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             }
           ]
         }
@@ -1385,7 +1385,7 @@
           "name": "Core Verbs",
           "name_native": "동사",
           "size": 13,
-          "health": 0.469,
+          "health": 0.215,
           "words": [
             {
               "term": "되다",
@@ -1397,7 +1397,7 @@
               "similar": "변하다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "주다",
@@ -1409,7 +1409,7 @@
               "similar": "드리다",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "쓰다",
@@ -1421,7 +1421,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 4,
-              "health": 0.586
+              "health": 0.31
             },
             {
               "term": "모으다",
@@ -1433,7 +1433,7 @@
               "similar": "아끼다",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "필요하다",
@@ -1445,7 +1445,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "해 보다",
@@ -1457,7 +1457,7 @@
               "similar": "시도하다",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "바르다",
@@ -1469,7 +1469,7 @@
               "similar": "칠하다",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "떠지다",
@@ -1481,7 +1481,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 1,
-              "health": 0.48
+              "health": 0.133
             },
             {
               "term": "불다",
@@ -1493,7 +1493,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "쉬다",
@@ -1505,7 +1505,7 @@
               "similar": "휴식하다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "생각하다",
@@ -1517,7 +1517,7 @@
               "similar": "느끼다",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "시도하다",
@@ -1529,7 +1529,7 @@
               "similar": "해 보다",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "찾다",
@@ -1541,7 +1541,7 @@
               "similar": "검색하다",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             }
           ]
         },
@@ -1550,7 +1550,7 @@
           "name": "Descriptions",
           "name_native": "형용사",
           "size": 8,
-          "health": 0.475,
+          "health": 0.234,
           "words": [
             {
               "term": "크다",
@@ -1562,7 +1562,7 @@
               "similar": "작다",
               "status": "review",
               "interval_days": 2,
-              "health": 0.527
+              "health": 0.211
             },
             {
               "term": "작다",
@@ -1574,7 +1574,7 @@
               "similar": "크다",
               "status": "review",
               "interval_days": 9,
-              "health": 0.666
+              "health": 0.443
             },
             {
               "term": "느리다",
@@ -1586,7 +1586,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 6,
-              "health": 0.625
+              "health": 0.374
             },
             {
               "term": "다양하다",
@@ -1598,7 +1598,7 @@
               "similar": "여러",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "선택",
@@ -1610,7 +1610,7 @@
               "similar": "고르다",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "문화",
@@ -1622,7 +1622,7 @@
               "similar": "",
               "status": "review",
               "interval_days": 3,
-              "health": 0.56
+              "health": 0.267
             },
             {
               "term": "잘생기다",
@@ -1634,7 +1634,7 @@
               "similar": "멋있다",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             },
             {
               "term": "지루하다",
@@ -1646,7 +1646,7 @@
               "similar": "재미없다",
               "status": "new",
               "interval_days": 0,
-              "health": 0.15
+              "health": 0.02
             }
           ]
         }

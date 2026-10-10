@@ -27,19 +27,20 @@ function islandTheme(health) {
   const h = Math.max(0, Math.min(1, health));
 
   let rock, ground;
-  if (h < 0.2) { rock = "#26221f"; ground = "#3a2b22"; }
-  else if (h < 0.35) { rock = "#4a3a2e"; ground = "#6e5038"; }
-  else if (h < 0.5) { rock = "#6b513a"; ground = "#8a6a44"; }
-  else if (h < 0.65) { rock = "#6b5c42"; ground = "#9c9266"; }
-  else if (h < 0.8) { rock = "#5e6a44"; ground = "#6fae66"; }
-  else { rock = "#3f5c3f"; ground = "#38a148"; }
+  if (h < 0.1) { rock = "#26221f"; ground = "#3a2b22"; }       // scorched (new cards)
+  else if (h < 0.25) { rock = "#4a3a2e"; ground = "#6e5038"; } // dirt (2-day interval)
+  else if (h < 0.4) { rock = "#6b513a"; ground = "#8a6a44"; }  // dry dirt
+  else if (h < 0.55) { rock = "#6b5c42"; ground = "#a8965a"; } // yellow dry grass (~1 week)
+  else if (h < 0.72) { rock = "#5e6a44"; ground = "#6fae66"; } // grass
+  else { rock = "#3f5c3f"; ground = "#38a148"; }               // lush (6 months)
 
-  const lava = h < 0.25 ? (0.25 - h) / 0.25 : 0;          // 1 -> 0 as health rises to .25
-  const waterfall = h > 0.85 ? (h - 0.85) / 0.15 : 0;       // 0 -> 1 from .85 to 1
+  const lava = h < 0.1 ? (0.1 - h) / 0.1 : 0;         // only the deadest islands
+  const waterfall = h > 0.9 ? (h - 0.9) / 0.1 : 0;    // rare — genuine mastery
 
-  let treeCount = 0;
-  if (h >= 0.25 && h < 0.5) treeCount = Math.round((h - 0.25) * 8);      // 0..2
-  else if (h >= 0.5) treeCount = Math.round(2 + (h - 0.5) * 14);         // 2..9
+  let treeCount = 0;                                    // dirt = no trees
+  if (h >= 0.4 && h < 0.55) treeCount = 1;              // yellow: a lone sapling
+  else if (h >= 0.55 && h < 0.72) treeCount = 2 + Math.round((h - 0.55) * 10);
+  else if (h >= 0.72) treeCount = 4 + Math.round((h - 0.72) * 18);
 
   return { rock, ground, lava, waterfall, treeCount };
 }

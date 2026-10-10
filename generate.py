@@ -36,12 +36,13 @@ def anki(action: str, **params):
 
 def word_health(card: dict) -> tuple[str, float]:
     ctype = card.get("type", 0)
-    if ctype == 0:
-        return "new", 0.15
-    if ctype == 1:
-        return "learning", 0.35
+    if ctype == 0:  # new — essentially no health
+        return "new", 0.02
+    if ctype in (1, 3):  # learning or relearning (forgot it)
+        return "learning", 0.10
     interval = max(card.get("interval", 0), 0)
-    h = min(1.0, 0.4 + 0.6 * (math.log(interval + 1) / math.log(181)))
+    # maturity: log curve with no floor — 2d ~ 0.21, 7d ~ 0.40, 30d ~ 0.66, 180d = 1.0
+    h = min(1.0, math.log(interval + 1) / math.log(181))
     return "review", round(h, 3)
 
 
