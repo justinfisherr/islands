@@ -44,6 +44,37 @@ body { color: #eaf2f7; }
 
 .hint { font-size: 12px; color: #8fa6b8; margin-top: 8px; }
 
+.island-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(12, 22, 32, 0.82);
+  color: #eaf2f7;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: border-color .15s, background .15s;
+}
+.island-label:hover { border-color: #4fc3a1; }
+.island-label.active { border-color: #4fc3a1; background: rgba(20, 44, 60, 0.92); }
+.island-label .count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: #22384a;
+  font-size: 11px;
+  color: #a8c2d4;
+}
+
 .panel {
   position: absolute;
   right: 16px;

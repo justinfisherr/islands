@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Html } from "@react-three/drei";
 import * as THREE from "three";
 
 const PALETTE = ["#4fc3a1", "#ff9d4d", "#6cc4ff", "#ff6b9d", "#b39ddb", "#ffd54f", "#81d4fa"];
@@ -9,18 +9,25 @@ function lerp(a, b, t) {
   return a + (b - a) * t;
 }
 
+// health 0..1 -> 0..1, but deliberately steep: mid-health stays brown.
+function greenness(health) {
+  return Math.pow(health, 2.5);
+}
+
 function grassColor(health) {
-  const r = Math.round(lerp(176, 63, health));
-  const g = Math.round(lerp(138, 143, health));
-  const b = Math.round(lerp(99, 79, health));
-  return `rgb(${r}, ${g}, ${b})`;
+  const g = greenness(health);
+  const r = Math.round(lerp(176, 63, g));
+  const gg = Math.round(lerp(138, 143, g));
+  const b = Math.round(lerp(99, 79, g));
+  return `rgb(${r}, ${gg}, ${b})`;
 }
 
 function leafColor(health) {
-  const r = Math.round(lerp(95, 31, health));
-  const g = Math.round(lerp(157, 107, health));
-  const b = Math.round(lerp(103, 58, health));
-  return `rgb(${r}, ${g}, ${b})`;
+  const g = greenness(health);
+  const r = Math.round(lerp(95, 31, g));
+  const gg = Math.round(lerp(157, 107, g));
+  const b = Math.round(lerp(103, 58, g));
+  return `rgb(${r}, ${gg}, ${b})`;
 }
 
 function domainStats(domain) {
@@ -33,8 +40,8 @@ function domainStats(domain) {
 
 function Island({ domain, index, position, selected, onSelect }) {
   const { size, health } = domainStats(domain);
-  const scale = 0.9 + Math.sqrt(size) * 0.18;
-  const treeCount = Math.max(2, Math.round(2 + health * 5));
+  const scale = 0.8 + Math.sqrt(size) * 0.15;
+  const treeCount = Math.max(1, Math.round(health * 6));
   const color = PALETTE[index % PALETTE.length];
 
   const trees = useMemo(() => {
@@ -80,6 +87,16 @@ function Island({ domain, index, position, selected, onSelect }) {
         <sphereGeometry args={[0.28, 16, 16]} />
         <meshStandardMaterial color={color} emissive={color} emissiveIntensity={selected ? 2.4 : 0.7} />
       </mesh>
+
+      <Html center distanceFactor={22} position={[0, 3.2, 0]}>
+        <button
+          className={`island-label ${selected ? "active" : ""}`}
+          onClick={() => onSelect(domain.id)}
+        >
+          {domain.name}
+          <span className="count">{size}</span>
+        </button>
+      </Html>
     </group>
   );
 }
@@ -112,7 +129,7 @@ export default function App() {
     const n = domains.length || 1;
     return domains.map((_, i) => {
       const a = (i / n) * Math.PI * 2;
-      return [Math.cos(a) * 7, 0, Math.sin(a) * 7];
+      return [Math.cos(a) * 12, 0, Math.sin(a) * 12];
     });
   }, [domains]);
 
@@ -136,7 +153,7 @@ export default function App() {
       <Canvas
         shadows
         dpr={[1, 2]}
-        camera={{ position: [0, 16, 14], fov: 50 }}
+        camera={{ position: [0, 22, 20], fov: 50 }}
         onPointerMissed={() => {
           setSelected(null);
           setFocus(new THREE.Vector3(0, 0, 0));
@@ -168,8 +185,8 @@ export default function App() {
         <OrbitControls
           makeDefault
           enablePan={false}
-          minDistance={6}
-          maxDistance={45}
+          minDistance={8}
+          maxDistance={55}
           minPolarAngle={0.25}
           maxPolarAngle={1.45}
           enableDamping
