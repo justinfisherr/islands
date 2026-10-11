@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-11T05:52:56.134804+00:00",
+  "generated_at": "2026-10-11T06:40:07.456684+00:00",
   "deck": "Korean-lingq",
-  "total_words": 130,
-  "overall_health": 0.302,
+  "total_words": 140,
+  "overall_health": 0.289,
   "domains": [
     {
       "id": "everyday",
@@ -13,8 +13,8 @@
           "id": "feelings",
           "name": "Feelings & States",
           "name_native": "감정",
-          "size": 16,
-          "health": 0.29,
+          "size": 19,
+          "health": 0.256,
           "words": [
             {
               "term": "슬프다",
@@ -192,9 +192,9 @@
               "example_en": "Cheolsu is annoyed and angry.",
               "mnemonic": "'jja-jeung' — the 'jja' of irritation grinding your teeth.",
               "similar": "화나다",
-              "status": "new",
+              "status": "learning",
               "interval_days": 0,
-              "health": 0.02
+              "health": 0.1
             },
             {
               "term": "화나다",
@@ -204,6 +204,42 @@
               "example_en": "Cheolsu gets angry.",
               "mnemonic": "화 (fire/anger) + 나다 (to arise) — anger arises, you get mad.",
               "similar": "짜증나다",
+              "status": "learning",
+              "interval_days": 0,
+              "health": 0.1
+            },
+            {
+              "term": "행복하다",
+              "meaning": "to be happy",
+              "base_form": "",
+              "example": "Gumi는 행복해요.",
+              "example_en": "Gumi is happy.",
+              "mnemonic": "행 = luck, 복 = fortune — happiness hangs on luck.",
+              "similar": "기쁘다",
+              "status": "new",
+              "interval_days": 0,
+              "health": 0.02
+            },
+            {
+              "term": "재미있다",
+              "meaning": "to be fun, interesting",
+              "base_form": "",
+              "example": "그 영화는 정말 재미있어요.",
+              "example_en": "That movie is really fun.",
+              "mnemonic": "'jae-mi' like 'jay-me' — 'it's me, jay!' = fun.",
+              "similar": "",
+              "status": "new",
+              "interval_days": 0,
+              "health": 0.02
+            },
+            {
+              "term": "수줍다",
+              "meaning": "to be shy",
+              "base_form": "",
+              "example": "Gumi는 집에서 수줍어요.",
+              "example_en": "Gumi is shy in the house.",
+              "mnemonic": "'su-jup' — so jumpy, so shy.",
+              "similar": "",
               "status": "new",
               "interval_days": 0,
               "health": 0.02
@@ -214,8 +250,8 @@
           "id": "time",
           "name": "Time & Frequency",
           "name_native": "시간",
-          "size": 16,
-          "health": 0.333,
+          "size": 17,
+          "health": 0.315,
           "words": [
             {
               "term": "오전",
@@ -408,6 +444,18 @@
               "status": "review",
               "interval_days": 1,
               "health": 0.133
+            },
+            {
+              "term": "전에",
+              "meaning": "before, ago",
+              "base_form": "",
+              "example": "이 영화를 전에 봤어요.",
+              "example_en": "I've seen this movie before.",
+              "mnemonic": "'jeon' like 'gone' — the time that's gone before.",
+              "similar": "저번",
+              "status": "new",
+              "interval_days": 0,
+              "health": 0.02
             }
           ]
         },
@@ -415,8 +463,8 @@
           "id": "home",
           "name": "Home",
           "name_native": "집",
-          "size": 7,
-          "health": 0.36,
+          "size": 9,
+          "health": 0.284,
           "words": [
             {
               "term": "침대",
@@ -501,6 +549,30 @@
               "status": "review",
               "interval_days": 2,
               "health": 0.211
+            },
+            {
+              "term": "집",
+              "meaning": "house, home",
+              "base_form": "",
+              "example": "저녁에 집에 있어요.",
+              "example_en": "I'm at home in the evening.",
+              "mnemonic": "'jip' like 'zip' — zip home.",
+              "similar": "",
+              "status": "new",
+              "interval_days": 0,
+              "health": 0.02
+            },
+            {
+              "term": "영화",
+              "meaning": "movie",
+              "base_form": "",
+              "example": "저녁에 영화를 봤어요.",
+              "example_en": "I watched a movie in the evening.",
+              "mnemonic": "'young-hwa' — a young star on screen.",
+              "similar": "",
+              "status": "new",
+              "interval_days": 0,
+              "health": 0.02
             }
           ]
         },
@@ -508,8 +580,8 @@
           "id": "people",
           "name": "People",
           "name_native": "사람",
-          "size": 5,
-          "health": 0.299,
+          "size": 7,
+          "health": 0.219,
           "words": [
             {
               "term": "여자친구",
@@ -570,6 +642,30 @@
               "status": "review",
               "interval_days": 2,
               "health": 0.211
+            },
+            {
+              "term": "아내",
+              "meaning": "wife",
+              "base_form": "",
+              "example": "Heeyeon은 제 아내예요.",
+              "example_en": "Heeyeon is my wife.",
+              "mnemonic": "'ah-nay' — she of the 'ah, not today' at home.",
+              "similar": "여자친구",
+              "status": "new",
+              "interval_days": 0,
+              "health": 0.02
+            },
+            {
+              "term": "강아지",
+              "meaning": "puppy",
+              "base_form": "",
+              "example": "Gumi는 강아지예요.",
+              "example_en": "Gumi is a puppy.",
+              "mnemonic": "'gang' — a gang of puppies.",
+              "similar": "개",
+              "status": "new",
+              "interval_days": 0,
+              "health": 0.02
             }
           ]
         },
@@ -1091,8 +1187,8 @@
           "id": "getting-around",
           "name": "Getting Around",
           "name_native": "이동",
-          "size": 12,
-          "health": 0.317,
+          "size": 13,
+          "health": 0.315,
           "words": [
             {
               "term": "가다",
@@ -1222,9 +1318,9 @@
               "example_en": "There are many cars on the highway.",
               "mnemonic": "고속 (high-speed) + 도로 (road) — the fast road, highway.",
               "similar": "도로",
-              "status": "new",
+              "status": "learning",
               "interval_days": 0,
-              "health": 0.02
+              "health": 0.1
             },
             {
               "term": "움직이다",
@@ -1234,6 +1330,18 @@
               "example_en": "The traffic is so jammed that I can't move.",
               "mnemonic": "'um-jig' like 'oom-jig' — jiggle, move around.",
               "similar": "이동하다",
+              "status": "review",
+              "interval_days": 2,
+              "health": 0.211
+            },
+            {
+              "term": "산책",
+              "meaning": "walk, stroll",
+              "base_form": "",
+              "example": "저녁에 Gumi하고 산책해요.",
+              "example_en": "I walk with Gumi in the evening.",
+              "mnemonic": "'san' like 'sun' — a sun-stroll.",
+              "similar": "걷다",
               "status": "new",
               "interval_days": 0,
               "health": 0.02
@@ -1345,7 +1453,7 @@
           "name": "Grammar & Connectives",
           "name_native": "문법",
           "size": 8,
-          "health": 0.2,
+          "health": 0.234,
           "words": [
             {
               "term": "거예요",
@@ -1427,9 +1535,9 @@
               "example_en": "The traffic is so jammed that I can't move.",
               "mnemonic": "수 (way/method) + 없다 (none) — no way, can't.",
               "similar": "수 있다",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 2,
+              "health": 0.211
             },
             {
               "term": "여전히",
@@ -1439,9 +1547,9 @@
               "example_en": "Still, Cheolsu is bored and tired.",
               "mnemonic": "여전 (as before) + 히 — as before, still.",
               "similar": "아직",
-              "status": "new",
+              "status": "learning",
               "interval_days": 0,
-              "health": 0.02
+              "health": 0.1
             }
           ]
         }
@@ -1456,8 +1564,8 @@
           "id": "verbs",
           "name": "Core Verbs",
           "name_native": "동사",
-          "size": 15,
-          "health": 0.222,
+          "size": 16,
+          "health": 0.226,
           "words": [
             {
               "term": "되다",
@@ -1623,9 +1731,9 @@
               "example_en": "He turns on the radio to listen to the news.",
               "mnemonic": "'kyeo' like 'key' — turn the key, turn it on.",
               "similar": "끄다",
-              "status": "new",
+              "status": "learning",
               "interval_days": 0,
-              "health": 0.02
+              "health": 0.1
             },
             {
               "term": "듣다",
@@ -1634,6 +1742,18 @@
               "example": "그는 뉴스를 들으려고 라디오를 켜요.",
               "example_en": "He turns on the radio to listen to the news.",
               "mnemonic": "'deut-da' — 'deut' like 'deaf' — the opposite, to listen.",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "health": 0.211
+            },
+            {
+              "term": "보다",
+              "meaning": "to watch, see",
+              "base_form": "",
+              "example": "무슨 영화를 봤어요?",
+              "example_en": "What movie did you watch?",
+              "mnemonic": "'bo' like 'bore' — watch till you're bored.",
               "similar": "",
               "status": "new",
               "interval_days": 0,
@@ -1646,7 +1766,7 @@
           "name": "Descriptions",
           "name_native": "형용사",
           "size": 8,
-          "health": 0.268,
+          "health": 0.272,
           "words": [
             {
               "term": "크다",
@@ -1740,9 +1860,9 @@
               "example_en": "He thinks they're boring.",
               "mnemonic": "'ji-ru' like 'jeer' — boring things make you jeer.",
               "similar": "재미없다",
-              "status": "learning",
-              "interval_days": 0,
-              "health": 0.1
+              "status": "review",
+              "interval_days": 1,
+              "health": 0.133
             }
           ]
         }
