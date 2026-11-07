@@ -1,8 +1,23 @@
 {
-  "generated_at": "2026-10-11T06:40:07.456684+00:00",
+  "generated_at": "2026-11-07T18:41:02.315298+00:00",
   "deck": "Korean-lingq",
-  "total_words": 140,
-  "overall_health": 0.289,
+  "total_words": 248,
+  "overall_health": 0.427,
+  "leeches": [
+    {
+      "term": "확인하다",
+      "meaning": "to check, confirm",
+      "base_form": "",
+      "example": "우선 그녀는 버스 시간표를 확인한다",
+      "example_en": "First, she checks the bus timetable.",
+      "mnemonic": "",
+      "similar": "점검하다, 검토하다",
+      "lapses": 8,
+      "suspended": false,
+      "interval_days": 1,
+      "status": "review"
+    }
+  ],
   "domains": [
     {
       "id": "everyday",
@@ -13,8 +28,8 @@
           "id": "feelings",
           "name": "Feelings & States",
           "name_native": "감정",
-          "size": 19,
-          "health": 0.256,
+          "size": 20,
+          "health": 0.545,
           "words": [
             {
               "term": "슬프다",
@@ -25,8 +40,11 @@
               "mnemonic": "'seul-peu' like 'sulky' — sad.",
               "similar": "우울하다",
               "status": "review",
-              "interval_days": 12,
-              "health": 0.493
+              "interval_days": 53,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.767
             },
             {
               "term": "기뻐하다",
@@ -37,8 +55,11 @@
               "mnemonic": "'gi-ppeo' like 'giddy' — happy.",
               "similar": "행복하다",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 47,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.745
             },
             {
               "term": "긴장되다",
@@ -49,8 +70,11 @@
               "mnemonic": "'gin-jang' — wound tight like a string, nervous.",
               "similar": "떨리다",
               "status": "review",
-              "interval_days": 7,
-              "health": 0.4
+              "interval_days": 4,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
             },
             {
               "term": "뿌듯하다",
@@ -61,8 +85,11 @@
               "mnemonic": "'ppudeut' like proud — chest out (no bad feeling).",
               "similar": "자랑스럽다, 흐뭇하다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 16,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
             },
             {
               "term": "기대되다",
@@ -73,8 +100,11 @@
               "mnemonic": "'giddy' — giddy for the new record.",
               "similar": "기대하다",
               "status": "review",
-              "interval_days": 8,
-              "health": 0.423
+              "interval_days": 27,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.641
             },
             {
               "term": "반갑다",
@@ -85,8 +115,11 @@
               "mnemonic": "'ban-gab' — glad to banter and gab.",
               "similar": "",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 17,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.556
             },
             {
               "term": "편하다",
@@ -97,8 +130,11 @@
               "mnemonic": "'pyeon' like pyjamas — comfy.",
               "similar": "편안하다",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 41,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.719
             },
             {
               "term": "마음에 들다",
@@ -109,8 +145,11 @@
               "mnemonic": "들다 (deul-da) ~ 'delve' — the thing you like delves into your heart.",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 4,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
             },
             {
               "term": "고민하다",
@@ -121,8 +160,11 @@
               "mnemonic": "'go-min' — go over it in your mind, worry.",
               "similar": "걱정하다",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 20,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.586
             },
             {
               "term": "바라다",
@@ -130,11 +172,14 @@
               "base_form": "",
               "example": "목걸이를 마음에 들어 하길 바라요.",
               "example_en": "I hope you like the necklace.",
-              "mnemonic": "'ba-ra' — wish on a star, 'ba-ra'.",
+              "mnemonic": "I am the genie para para",
               "similar": "원하다, 희망하다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 3,
+              "lapses": 9,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
             },
             {
               "term": "원하다",
@@ -145,8 +190,11 @@
               "mnemonic": "'won' — you 'want' it.",
               "similar": "바라다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 13,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.508
             },
             {
               "term": "아무런",
@@ -157,20 +205,26 @@
               "mnemonic": "'amu' like 'a moo' — not any, not even a cow.",
               "similar": "아무",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 9,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.443
             },
             {
-              "term": "흐려요",
-              "meaning": "is cloudy",
-              "base_form": "흐리다",
+              "term": "흐리다",
+              "meaning": "to be cloudy",
+              "base_form": "",
               "example": "하늘이 흐려요.",
               "example_en": "The sky is cloudy.",
               "mnemonic": "'heu' like haze — cloudy (sad but hopeful).",
               "similar": "",
               "status": "review",
-              "interval_days": 8,
-              "health": 0.423
+              "interval_days": 17,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.556
             },
             {
               "term": "미소",
@@ -181,8 +235,11 @@
               "mnemonic": "'mi-so' — 'me so' — me so smiley.",
               "similar": "웃음",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 23,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.611
             },
             {
               "term": "짜증나다",
@@ -192,9 +249,12 @@
               "example_en": "Cheolsu is annoyed and angry.",
               "mnemonic": "'jja-jeung' — the 'jja' of irritation grinding your teeth.",
               "similar": "화나다",
-              "status": "learning",
-              "interval_days": 0,
-              "health": 0.1
+              "status": "review",
+              "interval_days": 7,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
             },
             {
               "term": "화나다",
@@ -204,9 +264,12 @@
               "example_en": "Cheolsu gets angry.",
               "mnemonic": "화 (fire/anger) + 나다 (to arise) — anger arises, you get mad.",
               "similar": "짜증나다",
-              "status": "learning",
-              "interval_days": 0,
-              "health": 0.1
+              "status": "review",
+              "interval_days": 10,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.461
             },
             {
               "term": "행복하다",
@@ -216,9 +279,12 @@
               "example_en": "Gumi is happy.",
               "mnemonic": "행 = luck, 복 = fortune — happiness hangs on luck.",
               "similar": "기쁘다",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 55,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.774
             },
             {
               "term": "재미있다",
@@ -228,9 +294,12 @@
               "example_en": "That movie is really fun.",
               "mnemonic": "'jae-mi' like 'jay-me' — 'it's me, jay!' = fun.",
               "similar": "",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 54,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.771
             },
             {
               "term": "수줍다",
@@ -240,9 +309,27 @@
               "example_en": "Gumi is shy in the house.",
               "mnemonic": "'su-jup' — so jumpy, so shy.",
               "similar": "",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 20,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.586
+            },
+            {
+              "term": "목이 마르다",
+              "meaning": "to be thirsty",
+              "base_form": "",
+              "example": "목이 말라요.",
+              "example_en": "I'm thirsty.",
+              "mnemonic": "목이 말라요 — your 목 (throat) is 'malla' dry, like a parched marshmallow (말라).",
+              "similar": "",
+              "status": "review",
+              "interval_days": 5,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
             }
           ]
         },
@@ -250,8 +337,8 @@
           "id": "time",
           "name": "Time & Frequency",
           "name_native": "시간",
-          "size": 17,
-          "health": 0.315,
+          "size": 18,
+          "health": 0.473,
           "words": [
             {
               "term": "오전",
@@ -260,10 +347,13 @@
               "example": "지금은 오전 8시예요.",
               "example_en": "It's 8 AM now.",
               "mnemonic": "'oh' before noon — AM.",
-              "similar": "",
+              "similar": "오후",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 1,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
             },
             {
               "term": "저녁",
@@ -274,8 +364,11 @@
               "mnemonic": "'jeo-nyeok' — the evening (and dinner).",
               "similar": "밤",
               "status": "review",
-              "interval_days": 5,
-              "health": 0.345
+              "interval_days": 17,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.556
             },
             {
               "term": "다음",
@@ -286,8 +379,11 @@
               "mnemonic": "'daeum' like 'day' — the next day.",
               "similar": "",
               "status": "review",
-              "interval_days": 18,
-              "health": 0.566
+              "interval_days": 12,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.493
             },
             {
               "term": "저번",
@@ -298,8 +394,11 @@
               "mnemonic": "저 (that) + 번 (time) — that time before.",
               "similar": "지난번",
               "status": "review",
-              "interval_days": 11,
-              "health": 0.478
+              "interval_days": 4,
+              "lapses": 4,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
             },
             {
               "term": "드디어",
@@ -310,8 +409,11 @@
               "mnemonic": "'D-Day' — finally, flow state.",
               "similar": "마침내",
               "status": "review",
-              "interval_days": 13,
-              "health": 0.508
+              "interval_days": 9,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.443
             },
             {
               "term": "점점",
@@ -322,8 +424,11 @@
               "mnemonic": "'jeom-jeom' like zoom — gradually.",
               "similar": "차츰, 갈수록",
               "status": "review",
-              "interval_days": 11,
-              "health": 0.478
+              "interval_days": 17,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.556
             },
             {
               "term": "자주",
@@ -334,8 +439,11 @@
               "mnemonic": "'ja-ju' — a habit you do on 'ju-ju', often.",
               "similar": "흔히",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 16,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
             },
             {
               "term": "바로",
@@ -346,8 +454,11 @@
               "mnemonic": "'bar' — walk straight in, right away.",
               "similar": "곧, 바로바로, 즉시",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 7,
+              "lapses": 5,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
             },
             {
               "term": "바로바로",
@@ -358,8 +469,11 @@
               "mnemonic": "'bar-bar' — a fast bartender, right away.",
               "similar": "바로, 금방",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 7,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
             },
             {
               "term": "잠깐",
@@ -370,8 +484,11 @@
               "mnemonic": "'jam' (잠 = sleep) — a moment, a quick nap.",
               "similar": "잠시",
               "status": "review",
-              "interval_days": 9,
-              "health": 0.443
+              "interval_days": 47,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.745
             },
             {
               "term": "금세",
@@ -382,8 +499,11 @@
               "mnemonic": "'geum' like gem — grab the gem right away (the 'good immediately' bug).",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 7,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
             },
             {
               "term": "먼저",
@@ -394,8 +514,11 @@
               "mnemonic": "'meon' like Monday — first in line.",
               "similar": "우선, 첫",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 3,
+              "lapses": 6,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
             },
             {
               "term": "오래되다",
@@ -406,8 +529,11 @@
               "mnemonic": "오래 (o-rae) ~ 'old-ray' — left in the sun so long it aged.",
               "similar": "새롭다",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 10,
+              "lapses": 4,
+              "leech": false,
+              "suspended": false,
+              "health": 0.461
             },
             {
               "term": "새롭다",
@@ -418,8 +544,11 @@
               "mnemonic": "새 = bird AND new — brand-new.",
               "similar": "새, 오래되다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 16,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
             },
             {
               "term": "제시간",
@@ -430,8 +559,11 @@
               "mnemonic": "제 + 시간 (time) — 'on the dot' time, on time.",
               "similar": "정시",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 50,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.756
             },
             {
               "term": "첫",
@@ -442,8 +574,11 @@
               "mnemonic": "'cheot' like 'chute' — first out of the chute.",
               "similar": "먼저",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 20,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.586
             },
             {
               "term": "전에",
@@ -453,9 +588,27 @@
               "example_en": "I've seen this movie before.",
               "mnemonic": "'jeon' like 'gone' — the time that's gone before.",
               "similar": "저번",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 12,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.493
+            },
+            {
+              "term": "오후",
+              "meaning": "afternoon, PM",
+              "base_form": "",
+              "example": "지금은 오후 3시예요.",
+              "example_en": "It's 3 PM now.",
+              "mnemonic": "오후 — 'oh, who?' Who's free this afternoon (오후)?",
+              "similar": "오전",
+              "status": "review",
+              "interval_days": 8,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
             }
           ]
         },
@@ -463,8 +616,8 @@
           "id": "home",
           "name": "Home",
           "name_native": "집",
-          "size": 9,
-          "health": 0.284,
+          "size": 10,
+          "health": 0.524,
           "words": [
             {
               "term": "침대",
@@ -475,8 +628,11 @@
               "mnemonic": "'chim-dae' — where you 'chill' all day.",
               "similar": "",
               "status": "review",
-              "interval_days": 13,
-              "health": 0.508
+              "interval_days": 18,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.566
             },
             {
               "term": "냉장고",
@@ -487,8 +643,11 @@
               "mnemonic": "냉 (cold) + 장고 (storage) — the cold box.",
               "similar": "",
               "status": "review",
-              "interval_days": 9,
-              "health": 0.443
+              "interval_days": 38,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.705
             },
             {
               "term": "이사",
@@ -499,8 +658,11 @@
               "mnemonic": "'ee-sa' — the 'ease' of a fresh move.",
               "similar": "",
               "status": "review",
-              "interval_days": 12,
-              "health": 0.493
+              "interval_days": 14,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "입구",
@@ -511,8 +673,11 @@
               "mnemonic": "입 (mouth) + 구 (opening) — the mouth of a building.",
               "similar": "출구",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 11,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
             },
             {
               "term": "텅",
@@ -523,20 +688,26 @@
               "mnemonic": "'teong' — a hollow drum going tong, empty.",
               "similar": "비다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 10,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.461
             },
             {
-              "term": "씻어요",
-              "meaning": "washes",
-              "base_form": "씻다",
+              "term": "씻다",
+              "meaning": "to wash",
+              "base_form": "",
               "example": "손을 씻어요.",
               "example_en": "I wash my hands.",
               "mnemonic": "'ssi' like swish — wash.",
-              "similar": "",
+              "similar": "닦다",
               "status": "review",
-              "interval_days": 9,
-              "health": 0.443
+              "interval_days": 44,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.732
             },
             {
               "term": "누르다",
@@ -547,8 +718,11 @@
               "mnemonic": "'nudge' — press.",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 5,
+              "lapses": 6,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
             },
             {
               "term": "집",
@@ -558,9 +732,12 @@
               "example_en": "I'm at home in the evening.",
               "mnemonic": "'jip' like 'zip' — zip home.",
               "similar": "",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 64,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.803
             },
             {
               "term": "영화",
@@ -570,9 +747,27 @@
               "example_en": "I watched a movie in the evening.",
               "mnemonic": "'young-hwa' — a young star on screen.",
               "similar": "",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "닦다",
+              "meaning": "to wipe, scrub, clean",
+              "base_form": "",
+              "example": "행주로 식탁을 닦아요.",
+              "example_en": "I wipe the table with a dishcloth.",
+              "mnemonic": "닦다 — 'duck the' mess: wipe it clean (닦다 ~ 'duck-duh'). Hotdog",
+              "similar": "씻다",
+              "status": "review",
+              "interval_days": 8,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
             }
           ]
         },
@@ -580,8 +775,8 @@
           "id": "people",
           "name": "People",
           "name_native": "사람",
-          "size": 7,
-          "health": 0.219,
+          "size": 8,
+          "health": 0.673,
           "words": [
             {
               "term": "여자친구",
@@ -592,8 +787,11 @@
               "mnemonic": "여자 (woman) + 친구 (friend) — girlfriend.",
               "similar": "남자친구",
               "status": "review",
-              "interval_days": 11,
-              "health": 0.478
+              "interval_days": 50,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.756
             },
             {
               "term": "한국인",
@@ -604,8 +802,11 @@
               "mnemonic": "한국 (Korea) + 인 (person) — Korean.",
               "similar": "한국사람",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 40,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.714
             },
             {
               "term": "모두",
@@ -616,8 +817,11 @@
               "mnemonic": "'mo-du' — all the cows moo-du.",
               "similar": "전부",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 8,
+              "lapses": 5,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
             },
             {
               "term": "그들",
@@ -628,8 +832,11 @@
               "mnemonic": "그 (that) + 들 (plural) — those people, they.",
               "similar": "우리",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 10,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.461
             },
             {
               "term": "친구의 친구",
@@ -640,8 +847,11 @@
               "mnemonic": "친구 (friend) + 의 ('s) — a friend's friend.",
               "similar": "지인",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 58,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.784
             },
             {
               "term": "아내",
@@ -651,9 +861,12 @@
               "example_en": "Heeyeon is my wife.",
               "mnemonic": "'ah-nay' — she of the 'ah, not today' at home.",
               "similar": "여자친구",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 51,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.76
             },
             {
               "term": "강아지",
@@ -663,9 +876,27 @@
               "example_en": "Gumi is a puppy.",
               "mnemonic": "'gang' — a gang of puppies.",
               "similar": "개",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 53,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.767
+            },
+            {
+              "term": "이름",
+              "meaning": "name",
+              "base_form": "",
+              "example": "그의 여자친구의 이름은 효진이다.",
+              "example_en": "His girlfriend's name is Hyojin.",
+              "mnemonic": "이름 — 'ee-rum': the 'I' (이) you answer to; your name on the roster.",
+              "similar": "",
+              "status": "review",
+              "interval_days": 41,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.719
             }
           ]
         },
@@ -673,8 +904,8 @@
           "id": "body-health",
           "name": "Body & Health",
           "name_native": "몸·건강",
-          "size": 4,
-          "health": 0.152,
+          "size": 5,
+          "health": 0.54,
           "words": [
             {
               "term": "다리",
@@ -685,8 +916,11 @@
               "mnemonic": "'da-ri' like 'dolly' — a dolly's legs.",
               "similar": "팔",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 14,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "살",
@@ -697,8 +931,11 @@
               "mnemonic": "'sal' like 'salad' — eating salad to lose the 살.",
               "similar": "몸무게",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 11,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
             },
             {
               "term": "힘",
@@ -709,8 +946,11 @@
               "mnemonic": "'him' — 'him' — he's got the strength.",
               "similar": "근육",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 58,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.784
             },
             {
               "term": "헬스장",
@@ -721,8 +961,26 @@
               "mnemonic": "헬스 (health) + 장 (place) — the health place, gym.",
               "similar": "운동",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 16,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
+            },
+            {
+              "term": "숨",
+              "meaning": "breath",
+              "base_form": "",
+              "example": "숨이 차요.",
+              "example_en": "I'm out of breath.",
+              "mnemonic": "숨 — hold it too long and you 'swoon'; 숨 (soom) = breath. Don’t assume you have infinite breaths",
+              "similar": "호흡",
+              "status": "review",
+              "interval_days": 6,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.374
             }
           ]
         },
@@ -730,8 +988,8 @@
           "id": "work-study",
           "name": "Work & Study",
           "name_native": "일·공부",
-          "size": 3,
-          "health": 0.159,
+          "size": 4,
+          "health": 0.543,
           "words": [
             {
               "term": "교실",
@@ -742,8 +1000,11 @@
               "mnemonic": "'gyo-sil' — 'go seal' — go to the classroom.",
               "similar": "수업",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 54,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.771
             },
             {
               "term": "일자리",
@@ -754,8 +1015,11 @@
               "mnemonic": "일 (work) + 자리 (seat) — a work seat, a job.",
               "similar": "직업",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 17,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.556
             },
             {
               "term": "배우다",
@@ -766,8 +1030,26 @@
               "mnemonic": "'bae-u' — 'by-woo' — learn by doing.",
               "similar": "공부하다",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 8,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
+            },
+            {
+              "term": "완료",
+              "meaning": "completion, complete (done)",
+              "base_form": "",
+              "example": "작업이 완료됐어요.",
+              "example_en": "The task is complete.",
+              "mnemonic": "완료 — 'wan' (完, complete) + 'ryo' (了, finish): one checkmark, fully done.",
+              "similar": "끝",
+              "status": "review",
+              "interval_days": 8,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
             }
           ]
         }
@@ -782,8 +1064,8 @@
           "id": "food",
           "name": "Food & Drinks",
           "name_native": "음식",
-          "size": 7,
-          "health": 0.437,
+          "size": 8,
+          "health": 0.586,
           "words": [
             {
               "term": "계란",
@@ -794,8 +1076,11 @@
               "mnemonic": "'gye-ran' — an egg that 'ran' off the counter.",
               "similar": "",
               "status": "review",
-              "interval_days": 13,
-              "health": 0.508
+              "interval_days": 14,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "꿀",
@@ -806,8 +1091,11 @@
               "mnemonic": "'cool' — honey, smooth like Miles.",
               "similar": "",
               "status": "review",
-              "interval_days": 5,
-              "health": 0.345
+              "interval_days": 43,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.728
             },
             {
               "term": "옥수수",
@@ -818,8 +1106,11 @@
               "mnemonic": "'su-su' like shucking — corn.",
               "similar": "",
               "status": "review",
-              "interval_days": 7,
-              "health": 0.4
+              "interval_days": 22,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.603
             },
             {
               "term": "포도",
@@ -831,6 +1122,9 @@
               "similar": "",
               "status": "review",
               "interval_days": 13,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
               "health": 0.508
             },
             {
@@ -842,32 +1136,56 @@
               "mnemonic": "'jeop' like chop — a plate.",
               "similar": "",
               "status": "review",
-              "interval_days": 16,
-              "health": 0.545
+              "interval_days": 42,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.724
             },
             {
-              "term": "달콤해요",
-              "meaning": "is sweet",
-              "base_form": "달콤하다",
+              "term": "달콤하다",
+              "meaning": "to be sweet",
+              "base_form": "",
               "example": "이 케이크는 정말 달콤해요.",
               "example_en": "This cake is really sweet.",
               "mnemonic": "'dulce' (sweet) — sweet like the blues line.",
               "similar": "",
               "status": "review",
-              "interval_days": 9,
-              "health": 0.443
+              "interval_days": 41,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.719
             },
             {
-              "term": "상큼해요",
-              "meaning": "is refreshing, fresh (taste)",
-              "base_form": "상큼하다",
+              "term": "상큼하다",
+              "meaning": "to be refreshing, tangy",
+              "base_form": "",
               "example": "이 오렌지 주스는 상큼해요.",
               "example_en": "This orange juice is refreshing.",
               "mnemonic": "'sang-keum' like kumquat — citrusy fresh.",
               "similar": "",
               "status": "review",
-              "interval_days": 4,
-              "health": 0.31
+              "interval_days": 3,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
+            },
+            {
+              "term": "음료수",
+              "meaning": "beverage, drink",
+              "base_form": "",
+              "example": "음료수를 마셔요.",
+              "example_en": "I drink a beverage.",
+              "mnemonic": "음료수 — 'Um, no, Sue, that's my drink.'",
+              "similar": "음료",
+              "status": "review",
+              "interval_days": 24,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.619
             }
           ]
         },
@@ -876,19 +1194,22 @@
           "name": "Cooking & Eating",
           "name_native": "요리",
           "size": 4,
-          "health": 0.38,
+          "health": 0.438,
           "words": [
             {
-              "term": "끓여요",
-              "meaning": "boils (something)",
-              "base_form": "끓이다",
+              "term": "끓이다",
+              "meaning": "to boil",
+              "base_form": "",
               "example": "차를 끓여요.",
               "example_en": "I boil tea.",
               "mnemonic": "'kkeul' like kettle — boil.",
               "similar": "",
               "status": "review",
-              "interval_days": 13,
-              "health": 0.508
+              "interval_days": 9,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.443
             },
             {
               "term": "씹다",
@@ -899,32 +1220,41 @@
               "mnemonic": "'ssip' — chew, then sip.",
               "similar": "",
               "status": "review",
-              "interval_days": 5,
-              "health": 0.345
+              "interval_days": 8,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
             },
             {
-              "term": "까요",
-              "meaning": "to peel (polite present)",
-              "base_form": "까다",
+              "term": "까다",
+              "meaning": "to peel",
+              "base_form": "",
               "example": "사과 껍질을 까요.",
               "example_en": "I peel the apple's skin.",
               "mnemonic": "'kka' — the scrape of a peeler.",
               "similar": "",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 9,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.443
             },
             {
-              "term": "따라요",
-              "meaning": "pours",
-              "base_form": "따르다",
-              "example": "컵에 물을 따라요.",
-              "example_en": "I pour water into the cup.",
-              "mnemonic": "'ttar' like the tap — pour.",
-              "similar": "따라가다",
+              "term": "드시고 가세요",
+              "meaning": "for here / to dine in (lit. 'eat and go')",
+              "base_form": "",
+              "example": "드시고 가세요?",
+              "example_en": "For here or to go?",
+              "mnemonic": "드시고 가세요 — 'd'you see? (드시고) — go (가세요) only after you eat here.",
+              "similar": "",
               "status": "review",
-              "interval_days": 7,
-              "health": 0.4
+              "interval_days": 9,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.443
             }
           ]
         }
@@ -939,8 +1269,8 @@
           "id": "shops",
           "name": "Shops & Money",
           "name_native": "상점·돈",
-          "size": 11,
-          "health": 0.308,
+          "size": 14,
+          "health": 0.519,
           "words": [
             {
               "term": "가게",
@@ -951,8 +1281,11 @@
               "mnemonic": "가게 (ga-ge) ~ 'go get' — you go get things at the store.",
               "similar": "시장, 매장",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 14,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "매장",
@@ -963,8 +1296,11 @@
               "mnemonic": "매 (mae) ~ 'my' — 'my' store, where the stuff sits until you buy it.",
               "similar": "가게, 시장",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 7,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
             },
             {
               "term": "시장",
@@ -975,8 +1311,11 @@
               "mnemonic": "'si' like sizzle — the market sizzles.",
               "similar": "가게, 마트, 매장",
               "status": "review",
-              "interval_days": 4,
-              "health": 0.31
+              "interval_days": 15,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.533
             },
             {
               "term": "돈",
@@ -987,8 +1326,11 @@
               "mnemonic": "'don' like donate — money.",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 17,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.556
             },
             {
               "term": "사다",
@@ -999,8 +1341,11 @@
               "mnemonic": "사다 (sa-da) ~ 'sold' — to buy is the flip side of something being sold.",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 13,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.508
             },
             {
               "term": "싸다",
@@ -1011,8 +1356,11 @@
               "mnemonic": "'ssa' like 'sale' — cheap.",
               "similar": "비싸다",
               "status": "review",
-              "interval_days": 8,
-              "health": 0.423
+              "interval_days": 14,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "주문하다",
@@ -1023,19 +1371,25 @@
               "mnemonic": "'jumun' like 'you-moon' — put in your order.",
               "similar": "시키다",
               "status": "review",
-              "interval_days": 5,
-              "health": 0.345
+              "interval_days": 43,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.728
             },
             {
               "term": "고르다",
-              "meaning": "to choose, pick",
+              "meaning": "chose",
               "base_form": "",
-              "example": "메뉴를 골라요.",
-              "example_en": "I choose a menu item.",
-              "mnemonic": "'go' — go and pick one.",
-              "similar": "선택하다",
+              "example": "사진 네 장을 골랐어요",
+              "example_en": "I chose four photos.",
+              "mnemonic": "",
+              "similar": "선택하다, 뽑다",
               "status": "review",
               "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
               "health": 0.211
             },
             {
@@ -1047,8 +1401,11 @@
               "mnemonic": "최고 (best) + 애정 (love) — your #1 fave.",
               "similar": "최고",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 14,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "인증샷",
@@ -1059,8 +1416,11 @@
               "mnemonic": "인증 (proof) + 샷 (shot) — a proof photo.",
               "similar": "사진",
               "status": "review",
-              "interval_days": 12,
-              "health": 0.493
+              "interval_days": 16,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
             },
             {
               "term": "봉지",
@@ -1071,8 +1431,56 @@
               "mnemonic": "'bong' like bongo — a bag.",
               "similar": "",
               "status": "review",
-              "interval_days": 12,
-              "health": 0.493
+              "interval_days": 52,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.764
+            },
+            {
+              "term": "영수증 드릴까요",
+              "meaning": "Would you like a receipt? (shall I give you the receipt?)",
+              "base_form": "",
+              "example": "영수증 드릴까요?",
+              "example_en": "Would you like a receipt?",
+              "mnemonic": "영수증 — 'young Sue' (영수) wants proof (증) she paid: the receipt.",
+              "similar": "",
+              "status": "review",
+              "interval_days": 8,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
+            },
+            {
+              "term": "빌리다",
+              "meaning": "to borrow, rent",
+              "base_form": "",
+              "example": "여기에서 자전거를 빌려요.",
+              "example_en": "I rent a bicycle here.",
+              "mnemonic": "빌리다 — 'Billy'-da: Bill borrows (빌리다) everything, never buys his own.",
+              "similar": "빌려주다",
+              "status": "review",
+              "interval_days": 21,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.595
+            },
+            {
+              "term": "결제하다",
+              "meaning": "to pay, settle a bill",
+              "base_form": "",
+              "example": "카드로 결제해요.",
+              "example_en": "I pay by card.",
+              "mnemonic": "결제하다 — 'gyeol-je' ~ 'call-J': call the cashier to settle (결제) the bill.",
+              "similar": "지불하다",
+              "status": "review",
+              "interval_days": 9,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.443
             }
           ]
         }
@@ -1087,8 +1495,8 @@
           "id": "clothing",
           "name": "Clothing & Colors",
           "name_native": "옷·색",
-          "size": 7,
-          "health": 0.419,
+          "size": 8,
+          "health": 0.522,
           "words": [
             {
               "term": "입다",
@@ -1099,8 +1507,11 @@
               "mnemonic": "'ip' like zip — zip up your clothes.",
               "similar": "신다, 끼다, 갈아입다",
               "status": "review",
-              "interval_days": 9,
-              "health": 0.443
+              "interval_days": 11,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
             },
             {
               "term": "신다",
@@ -1111,32 +1522,41 @@
               "mnemonic": "'sin' like shin — shoes/socks on your shins.",
               "similar": "입다, 끼다, 갈아입다",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 18,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.566
             },
             {
-              "term": "껴요",
-              "meaning": "puts on (gloves, rings, etc.)",
-              "base_form": "끼다",
+              "term": "끼다",
+              "meaning": "to put on (gloves, rings)",
+              "base_form": "",
               "example": "장갑을 껴요.",
               "example_en": "I put on gloves.",
-              "mnemonic": "'key' — slide on like a key into a lock.",
+              "mnemonic": "Is that a ring?? No its a key",
               "similar": "갈아입다, 신다, 입다",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 1,
+              "lapses": 14,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
             },
             {
-              "term": "갈아입어요",
-              "meaning": "changes (clothes)",
-              "base_form": "갈아입다",
+              "term": "갈아입다",
+              "meaning": "to change clothes",
+              "base_form": "",
               "example": "지은은 신발을 벗고 옷을 갈아입어요.",
               "example_en": "Jieun takes off her shoes and changes clothes.",
               "mnemonic": "'gala' — change into something nicer for the gala (or just the couch).",
               "similar": "끼다, 신다, 입다",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 30,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.661
             },
             {
               "term": "양말",
@@ -1147,8 +1567,11 @@
               "mnemonic": "'yang' like yarn — socks knit from yarn.",
               "similar": "",
               "status": "review",
-              "interval_days": 5,
-              "health": 0.345
+              "interval_days": 4,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
             },
             {
               "term": "파란색",
@@ -1159,8 +1582,11 @@
               "mnemonic": "'pa-ran' — a 'paranormal' blue glow.",
               "similar": "파랗다",
               "status": "review",
-              "interval_days": 11,
-              "health": 0.478
+              "interval_days": 44,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.732
             },
             {
               "term": "검은색",
@@ -1171,8 +1597,26 @@
               "mnemonic": "'geom' — a dark 'gem', black.",
               "similar": "검다",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 48,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.749
+            },
+            {
+              "term": "잠바",
+              "meaning": "jacket, jumper",
+              "base_form": "",
+              "example": "잠바를 입어요.",
+              "example_en": "I put on a jacket.",
+              "mnemonic": "잠바 — 'jam-ba': the 'jumper' you jam on when it's cold.",
+              "similar": "점퍼",
+              "status": "review",
+              "interval_days": 16,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
             }
           ]
         }
@@ -1187,8 +1631,8 @@
           "id": "getting-around",
           "name": "Getting Around",
           "name_native": "이동",
-          "size": 13,
-          "health": 0.315,
+          "size": 19,
+          "health": 0.508,
           "words": [
             {
               "term": "가다",
@@ -1199,8 +1643,11 @@
               "mnemonic": "'gotta' — gotta go (the sundown run).",
               "similar": "오다",
               "status": "review",
-              "interval_days": 4,
-              "health": 0.31
+              "interval_days": 21,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.595
             },
             {
               "term": "오다",
@@ -1211,8 +1658,11 @@
               "mnemonic": "'oh!' — someone's coming.",
               "similar": "가다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 13,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.508
             },
             {
               "term": "내리다",
@@ -1223,8 +1673,11 @@
               "mnemonic": "'narrow' — the road narrows as you go down.",
               "similar": "타다",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 41,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.719
             },
             {
               "term": "따라가다",
@@ -1235,20 +1688,26 @@
               "mnemonic": "'ttara' like trailer — following Miles down the lead sheet.",
               "similar": "따르다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 12,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.493
             },
             {
-              "term": "걸어서",
-              "meaning": "by walking, on foot",
-              "base_form": "걷다",
+              "term": "걷다",
+              "meaning": "to walk; to go on foot",
+              "base_form": "",
               "example": "회사로 10분 정도 걸어서 가요.",
               "example_en": "I go to work on foot, about 10 minutes.",
               "mnemonic": "'goal' — on foot, walking toward the goal.",
               "similar": "",
               "status": "review",
-              "interval_days": 13,
-              "health": 0.508
+              "interval_days": 4,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
             },
             {
               "term": "서다",
@@ -1259,8 +1718,11 @@
               "mnemonic": "'seo' like 'so' — stand so still.",
               "similar": "앉다",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 39,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.71
             },
             {
               "term": "비키다",
@@ -1271,8 +1733,11 @@
               "mnemonic": "'biki' like 'back off' — step aside (inner critic, move).",
               "similar": "",
               "status": "review",
-              "interval_days": 13,
-              "health": 0.508
+              "interval_days": 10,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.461
             },
             {
               "term": "등산",
@@ -1283,8 +1748,11 @@
               "mnemonic": "'deung' like ding — ding the summit.",
               "similar": "등반",
               "status": "review",
-              "interval_days": 12,
-              "health": 0.493
+              "interval_days": 31,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.667
             },
             {
               "term": "구경",
@@ -1295,8 +1763,11 @@
               "mnemonic": "'goo' like googly eyes — gawking at the record bins.",
               "similar": "관광",
               "status": "review",
-              "interval_days": 11,
-              "health": 0.478
+              "interval_days": 3,
+              "lapses": 5,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
             },
             {
               "term": "절",
@@ -1307,8 +1778,11 @@
               "mnemonic": "'jeol' like jewel — a temple.",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 14,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "고속도로",
@@ -1318,9 +1792,12 @@
               "example_en": "There are many cars on the highway.",
               "mnemonic": "고속 (high-speed) + 도로 (road) — the fast road, highway.",
               "similar": "도로",
-              "status": "learning",
-              "interval_days": 0,
-              "health": 0.1
+              "status": "review",
+              "interval_days": 17,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.556
             },
             {
               "term": "움직이다",
@@ -1331,8 +1808,11 @@
               "mnemonic": "'um-jig' like 'oom-jig' — jiggle, move around.",
               "similar": "이동하다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 52,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.764
             },
             {
               "term": "산책",
@@ -1342,9 +1822,102 @@
               "example_en": "I walk with Gumi in the evening.",
               "mnemonic": "'san' like 'sun' — a sun-stroll.",
               "similar": "걷다",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 59,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.788
+            },
+            {
+              "term": "횡단보도",
+              "meaning": "crosswalk, pedestrian crossing",
+              "base_form": "",
+              "example": "횡단보도를 건너요.",
+              "example_en": "I cross at the crosswalk.",
+              "mnemonic": "횡단보도 — think Abbey Road: cross (횡단) the walkway (보도) on the zebra stripes.",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "자전거",
+              "meaning": "bicycle",
+              "base_form": "",
+              "example": "그래서 오랜만에 자전거를 탈 거예요.",
+              "example_en": "So after a long time, I'm going to ride my bicycle.",
+              "mnemonic": "자전거 — 'jah-john-go!': pedal like you're cheering yourself on. (자전 = 'self-turning' cart.)",
+              "similar": "",
+              "status": "review",
+              "interval_days": 18,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.566
+            },
+            {
+              "term": "달리다",
+              "meaning": "to run",
+              "base_form": "",
+              "example": "공원에서 달려요.",
+              "example_en": "I run in the park.",
+              "mnemonic": "달리다 — don't 'dally' (달리다): run! Like your sundown runs.",
+              "similar": "뛰다",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "들어가다",
+              "meaning": "to go in, enter",
+              "base_form": "",
+              "example": "빵집에 들어가요.",
+              "example_en": "I go into the bakery.",
+              "mnemonic": "들어가다 — 'the door'-eo-ga-da: go (가다) through the door (들어).",
+              "similar": "나가다",
+              "status": "review",
+              "interval_days": 4,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
+            },
+            {
+              "term": "건너다",
+              "meaning": "to cross (a road, bridge)",
+              "base_form": "",
+              "example": "횡단보도를 건너요.",
+              "example_en": "I cross the crosswalk.",
+              "mnemonic": "건너다 — 'get over': cross (건너) to get over to the other side. Gunna!! We gotta cross the brkdge",
+              "similar": "지나가다",
+              "status": "review",
+              "interval_days": 7,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
+            },
+            {
+              "term": "타다",
+              "meaning": "to ride, take (a vehicle)",
+              "base_form": "",
+              "example": "가끔 밤에 공원에서 자전거를 타요.",
+              "example_en": "Sometimes I ride my bicycle in the park at night.",
+              "mnemonic": "타다 — 'ta-da!': hop on the bike and 'ta-da', you're riding.",
+              "similar": "올라타다",
+              "status": "review",
+              "interval_days": 22,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.603
             }
           ]
         }
@@ -1359,8 +1932,8 @@
           "id": "talking",
           "name": "Talking",
           "name_native": "대화",
-          "size": 7,
-          "health": 0.354,
+          "size": 8,
+          "health": 0.49,
           "words": [
             {
               "term": "말하다",
@@ -1371,8 +1944,11 @@
               "mnemonic": "말 (word) + 하다 — to speak words.",
               "similar": "이야기하다",
               "status": "review",
-              "interval_days": 4,
-              "health": 0.31
+              "interval_days": 22,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.603
             },
             {
               "term": "이야기",
@@ -1383,8 +1959,11 @@
               "mnemonic": "'ya' like yak — talking, telling stories.",
               "similar": "대화, 말, 말하다",
               "status": "review",
-              "interval_days": 10,
-              "health": 0.461
+              "interval_days": 45,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.736
             },
             {
               "term": "묻다",
@@ -1395,8 +1974,11 @@
               "mnemonic": "'mut' like 'mutter' — ask under your breath.",
               "similar": "질문하다",
               "status": "review",
-              "interval_days": 11,
-              "health": 0.478
+              "interval_days": 8,
+              "lapses": 4,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
             },
             {
               "term": "소개하다",
@@ -1408,6 +1990,9 @@
               "similar": "",
               "status": "review",
               "interval_days": 3,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
               "health": 0.267
             },
             {
@@ -1419,8 +2004,11 @@
               "mnemonic": "'so-ri' — the sound you hear.",
               "similar": "",
               "status": "review",
-              "interval_days": 4,
-              "health": 0.31
+              "interval_days": 15,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.533
             },
             {
               "term": "언어",
@@ -1431,8 +2019,11 @@
               "mnemonic": "'eon-eo' like 'on-uh' — the words on your tongue.",
               "similar": "말",
               "status": "review",
-              "interval_days": 4,
-              "health": 0.31
+              "interval_days": 14,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "대하다",
@@ -1443,8 +2034,26 @@
               "mnemonic": "'dae' like debate — what it's about.",
               "similar": "관하다",
               "status": "review",
-              "interval_days": 5,
-              "health": 0.345
+              "interval_days": 2,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "어서오세요",
+              "meaning": "welcome! (greeting said to arriving customers/guests)",
+              "base_form": "",
+              "example": "어서오세요!",
+              "example_en": "Welcome!",
+              "mnemonic": "어서오세요 — 'uh-so... oh, say yo!' A shopkeeper's welcome that rolls into 'yo'.",
+              "similar": "환영",
+              "status": "review",
+              "interval_days": 25,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.627
             }
           ]
         },
@@ -1453,7 +2062,7 @@
           "name": "Grammar & Connectives",
           "name_native": "문법",
           "size": 8,
-          "health": 0.234,
+          "health": 0.388,
           "words": [
             {
               "term": "거예요",
@@ -1464,8 +2073,11 @@
               "mnemonic": "'gonna' — the future ending (someday I'll play it).",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 3,
+              "lapses": 5,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
             },
             {
               "term": "예",
@@ -1476,8 +2088,11 @@
               "mnemonic": "'yeah' — 'yeah, for example…'",
               "similar": "보기",
               "status": "review",
-              "interval_days": 7,
-              "health": 0.4
+              "interval_days": 23,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.611
             },
             {
               "term": "혹은",
@@ -1488,8 +2103,11 @@
               "mnemonic": "'ho-geun' — or, alternatively.",
               "similar": "또는",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 4,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
             },
             {
               "term": "하나",
@@ -1500,8 +2118,11 @@
               "mnemonic": "'ha-na' — 'ha, one more!'",
               "similar": "한",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 23,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.611
             },
             {
               "term": "따르다",
@@ -1512,8 +2133,11 @@
               "mnemonic": "'tta-ra' — follow the lead sheet.",
               "similar": "따라가다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 3,
+              "lapses": 7,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
             },
             {
               "term": "어쩌면",
@@ -1523,9 +2147,12 @@
               "example_en": "Maybe she wants to learn dance.",
               "mnemonic": "'eo-jjeo-myeon' — 'oh, just maybe'.",
               "similar": "아마",
-              "status": "learning",
-              "interval_days": 0,
-              "health": 0.1
+              "status": "review",
+              "interval_days": 5,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
             },
             {
               "term": "수 없다",
@@ -1536,8 +2163,11 @@
               "mnemonic": "수 (way/method) + 없다 (none) — no way, can't.",
               "similar": "수 있다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 11,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
             },
             {
               "term": "여전히",
@@ -1545,11 +2175,90 @@
               "base_form": "",
               "example": "그래도 여전히, 철수는 심심하고 피곤해요.",
               "example_en": "Still, Cheolsu is bored and tired.",
-              "mnemonic": "여전 (as before) + 히 — as before, still.",
+              "mnemonic": "yo johnny are you still here?!",
               "similar": "아직",
-              "status": "learning",
-              "interval_days": 0,
-              "health": 0.1
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 9,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "name": "Nature",
+      "name_native": "자연",
+      "islands": [
+        {
+          "id": "outdoors",
+          "name": "Nature & Outdoors",
+          "name_native": "자연·야외",
+          "size": 4,
+          "health": 0.512,
+          "words": [
+            {
+              "term": "피다",
+              "meaning": "to bloom, blossom",
+              "base_form": "",
+              "example": "저기 꽃이 피었어요.",
+              "example_en": "The flowers bloomed over there.",
+              "mnemonic": "피다 — the flower goes 'P!' (피) and blooms open.",
+              "similar": "",
+              "status": "review",
+              "interval_days": 6,
+              "lapses": 4,
+              "leech": false,
+              "suspended": false,
+              "health": 0.374
+            },
+            {
+              "term": "꽃",
+              "meaning": "flower",
+              "base_form": "",
+              "example": "공원에는 나무하고 꽃이 많습니다.",
+              "example_en": "There are many trees and flowers in the park.",
+              "mnemonic": "꽃 — 'kkot' (tight double-k): a flower you 'caught'.",
+              "similar": "",
+              "status": "review",
+              "interval_days": 64,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.803
+            },
+            {
+              "term": "새",
+              "meaning": "bird",
+              "base_form": "",
+              "example": "새가 날아요.",
+              "example_en": "The bird flies.",
+              "mnemonic": "새 — the bird 'says' (새 ~ 'say') tweet. Also means 'new'.",
+              "similar": "",
+              "status": "review",
+              "interval_days": 22,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.603
+            },
+            {
+              "term": "풍경",
+              "meaning": "scenery, landscape, view",
+              "base_form": "",
+              "example": "풍경이 예뻐요.",
+              "example_en": "The scenery is pretty.",
+              "mnemonic": "풍경 — 'wind scene' (풍 風 + 경 景): the view the wind blows through. What do you think about the poo gung scenery&nbsp;",
+              "similar": "경치",
+              "status": "review",
+              "interval_days": 3,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
             }
           ]
         }
@@ -1565,7 +2274,7 @@
           "name": "Core Verbs",
           "name_native": "동사",
           "size": 16,
-          "health": 0.226,
+          "health": 0.507,
           "words": [
             {
               "term": "되다",
@@ -1576,8 +2285,11 @@
               "mnemonic": "'doe' like dough — rising to become bread.",
               "similar": "변하다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 7,
+              "lapses": 5,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
             },
             {
               "term": "주다",
@@ -1588,8 +2300,11 @@
               "mnemonic": "'ju' like juice — give me some.",
               "similar": "드리다",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 6,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.374
             },
             {
               "term": "쓰다",
@@ -1600,8 +2315,11 @@
               "mnemonic": "쓰다 (sseu-da) ~ 'sudo' — to use, like running sudo on a computer.",
               "similar": "",
               "status": "review",
-              "interval_days": 4,
-              "health": 0.31
+              "interval_days": 16,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
             },
             {
               "term": "모으다",
@@ -1612,8 +2330,11 @@
               "mnemonic": "'mo-eu' like 'more' — gather more, save up.",
               "similar": "아끼다",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 16,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
             },
             {
               "term": "필요하다",
@@ -1624,8 +2345,11 @@
               "mnemonic": "필요 (pi-ryo) ~ 'pillow' — a pillow is what you always need.",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 44,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.732
             },
             {
               "term": "해 보다",
@@ -1636,8 +2360,11 @@
               "mnemonic": "해 (do) + 보다 (see) — do and see, try.",
               "similar": "시도하다",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 20,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.586
             },
             {
               "term": "바르다",
@@ -1648,8 +2375,11 @@
               "mnemonic": "'bar' of lotion — spread it on (before the run).",
               "similar": "칠하다",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 1,
+              "lapses": 5,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
             },
             {
               "term": "떠지다",
@@ -1660,8 +2390,11 @@
               "mnemonic": "'tteo' — your eyes tteo-pen.",
               "similar": "",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 11,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
             },
             {
               "term": "불다",
@@ -1672,8 +2405,11 @@
               "mnemonic": "'bul' like blow — the wind blows.",
               "similar": "",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 5,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
             },
             {
               "term": "쉬다",
@@ -1684,8 +2420,11 @@
               "mnemonic": "'swi' like sweet — a sweet rest.",
               "similar": "휴식하다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 8,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
             },
             {
               "term": "생각하다",
@@ -1696,8 +2435,11 @@
               "mnemonic": "'saeng-gak' — the 'gak' of a thought clicking in.",
               "similar": "느끼다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 58,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.784
             },
             {
               "term": "시도하다",
@@ -1708,8 +2450,11 @@
               "mnemonic": "'si-do' — 'see-do' — try it and see, just do.",
               "similar": "해 보다",
               "status": "review",
-              "interval_days": 1,
-              "health": 0.133
+              "interval_days": 5,
+              "lapses": 4,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
             },
             {
               "term": "찾다",
@@ -1720,8 +2465,11 @@
               "mnemonic": "'chat-da' — 'chat' — find someone to chat with.",
               "similar": "검색하다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 9,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.443
             },
             {
               "term": "켜다",
@@ -1731,9 +2479,12 @@
               "example_en": "He turns on the radio to listen to the news.",
               "mnemonic": "'kyeo' like 'key' — turn the key, turn it on.",
               "similar": "끄다",
-              "status": "learning",
-              "interval_days": 0,
-              "health": 0.1
+              "status": "review",
+              "interval_days": 7,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
             },
             {
               "term": "듣다",
@@ -1744,8 +2495,11 @@
               "mnemonic": "'deut-da' — 'deut' like 'deaf' — the opposite, to listen.",
               "similar": "",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 56,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.778
             },
             {
               "term": "보다",
@@ -1755,9 +2509,12 @@
               "example_en": "What movie did you watch?",
               "mnemonic": "'bo' like 'bore' — watch till you're bored.",
               "similar": "",
-              "status": "new",
-              "interval_days": 0,
-              "health": 0.02
+              "status": "review",
+              "interval_days": 64,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.803
             }
           ]
         },
@@ -1765,8 +2522,8 @@
           "id": "descriptions",
           "name": "Descriptions",
           "name_native": "형용사",
-          "size": 8,
-          "health": 0.272,
+          "size": 10,
+          "health": 0.436,
           "words": [
             {
               "term": "크다",
@@ -1777,8 +2534,11 @@
               "mnemonic": "크다 (keu-da) ~ 'cuda' as in barracuda — big fish energy.",
               "similar": "작다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 14,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.521
             },
             {
               "term": "작다",
@@ -1789,8 +2549,11 @@
               "mnemonic": "'jak' — a tiny 'jack', small.",
               "similar": "크다",
               "status": "review",
-              "interval_days": 9,
-              "health": 0.443
+              "interval_days": 33,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.678
             },
             {
               "term": "느리다",
@@ -1801,8 +2564,11 @@
               "mnemonic": "느리다 (neu-ri-da) ~ 'newly' — fast only when newly bought; this machine's old.",
               "similar": "",
               "status": "review",
-              "interval_days": 6,
-              "health": 0.374
+              "interval_days": 62,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.797
             },
             {
               "term": "다양하다",
@@ -1810,11 +2576,14 @@
               "base_form": "",
               "example": "다양한 음식이 있어요.",
               "example_en": "There are various foods.",
-              "mnemonic": "'da-yang' — a yin-yang of variety.",
+              "mnemonic": "dayang there are so many various diverse things here",
               "similar": "여러",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 4,
+              "lapses": 8,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
             },
             {
               "term": "선택",
@@ -1825,8 +2594,11 @@
               "mnemonic": "'seon-taek' — the pick you choose.",
               "similar": "고르다",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 10,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.461
             },
             {
               "term": "문화",
@@ -1837,8 +2609,11 @@
               "mnemonic": "'mun' like moon — culture under one moon.",
               "similar": "",
               "status": "review",
-              "interval_days": 3,
-              "health": 0.267
+              "interval_days": 5,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
             },
             {
               "term": "잘생기다",
@@ -1849,8 +2624,11 @@
               "mnemonic": "잘 (well) + 생기다 — someone who 'turned out well' is handsome.",
               "similar": "멋있다",
               "status": "review",
-              "interval_days": 2,
-              "health": 0.211
+              "interval_days": 57,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.781
             },
             {
               "term": "지루하다",
@@ -1861,8 +2639,1317 @@
               "mnemonic": "'ji-ru' like 'jeer' — boring things make you jeer.",
               "similar": "재미없다",
               "status": "review",
+              "interval_days": 8,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
+            },
+            {
+              "term": "부지런하다",
+              "meaning": "to be diligent, hardworking",
+              "base_form": "",
+              "example": "아침하고 저녁에 산책해요? 부지런하네요.",
+              "example_en": "You walk morning and evening? You're diligent.",
+              "mnemonic": "boo-jee-run — boo-jee runs every morning, diligent.",
+              "similar": "성실하다",
+              "status": "new",
+              "interval_days": 0,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.02
+            },
+            {
+              "term": "쉽다",
+              "meaning": "to be easy",
+              "base_form": "",
+              "example": "쉽게 다시 물을게요.",
+              "example_en": "I'll ask again simply.",
+              "mnemonic": "ship-da — easy as shipping it.",
+              "similar": "간단하다",
+              "status": "new",
+              "interval_days": 0,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.02
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unmapped",
+      "name": "Unmapped",
+      "name_native": "기타",
+      "islands": [
+        {
+          "id": "unmapped",
+          "name": "Not yet placed",
+          "name_native": "미분류",
+          "size": 84,
+          "health": 0.26,
+          "words": [
+            {
+              "term": "가구",
+              "meaning": "furniture",
+              "base_form": "",
+              "example": "또 다른 아파트에는 가구가 있다",
+              "example_en": "Another apartment has furniture",
+              "mnemonic": "",
+              "similar": "가재, 집기",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "가르치다",
+              "meaning": "to teach",
+              "base_form": "",
+              "example": "지금은 한국어를 가르치고 카페에서도 일하고 있어요.",
+              "example_en": "Right now, I am teaching Korean and also working at a cafe.",
+              "mnemonic": "",
+              "similar": "교육하다, 설명하다",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "가지",
+              "meaning": "kind, sort",
+              "base_form": "",
+              "example": "개봉 영화 중 세 가지는 로맨스 영화입니다",
+              "example_en": "Among the released movies, three are romance films.",
+              "mnemonic": "'ga-ji' — holding different types",
+              "similar": "종류는, 유형은",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "간식",
+              "meaning": "snack",
+              "base_form": "",
+              "example": "맛있는 간식으로 강아지를 꼬셔서 납치한다는 얘기를",
+              "example_en": "The story is about kidnapping a dog by luring it with tasty snacks.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 12,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.493
+            },
+            {
+              "term": "갈색",
+              "meaning": "brown",
+              "base_form": "",
+              "example": "그녀에게 갈색 치마가 보인다",
+              "example_en": "She sees a brown skirt.",
+              "mnemonic": "",
+              "similar": "검정색, 흰색",
+              "status": "review",
+              "interval_days": 16,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.545
+            },
+            {
+              "term": "감기",
+              "meaning": "cold (illness)",
+              "base_form": "",
+              "example": "의사는 그녀가 감기에 걸렸다고 말합니다",
+              "example_en": "The doctor says she caught a cold.",
+              "mnemonic": "'gam-gi' — germs getting you",
+              "similar": "독감에, 몸살에",
+              "status": "review",
               "interval_days": 1,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
               "health": 0.133
+            },
+            {
+              "term": "같다",
+              "meaning": "seems",
+              "base_form": "",
+              "example": "얘긴 작년에도 들었던 거 같은데",
+              "example_en": "It seems like I heard this story last year",
+              "mnemonic": "",
+              "similar": "비슷하다, 유사하다",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "거리",
+              "meaning": "distance",
+              "base_form": "",
+              "example": "지하철 타고 10분 거리에 있어요",
+              "example_en": "It's a 10-minute distance by subway",
+              "mnemonic": "",
+              "similar": "길이, 간격",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "거실",
+              "meaning": "living room",
+              "base_form": "",
+              "example": "지금 거실에 가구가 별로 없어요.",
+              "example_en": "There are not many furniture in the living room now.",
+              "mnemonic": "",
+              "similar": "응접실, 주방",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "결정하다",
+              "meaning": "decide",
+              "base_form": "",
+              "example": "그녀는 병원에 가기로 결정합니다",
+              "example_en": "She decides to go to the hospital",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "계획표",
+              "meaning": "plan",
+              "base_form": "",
+              "example": "자! 그럼, 생활 계획표는 빠진 사람 없이 모두",
+              "example_en": "Alright! So, everyone has a daily plan without exception",
+              "mnemonic": "",
+              "similar": "일정표, 스케줄",
+              "status": "review",
+              "interval_days": 7,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.4
+            },
+            {
+              "term": "그날",
+              "meaning": "that day",
+              "base_form": "",
+              "example": "그날에는 포토이즘에 갔어요",
+              "example_en": "On that day, I went to Photozim.",
+              "mnemonic": "",
+              "similar": "그때, 당시",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "기차",
+              "meaning": "train",
+              "base_form": "",
+              "example": "대신 그녀는 기차 시간표를 확인한다",
+              "example_en": "Instead, she checks the train schedule.",
+              "mnemonic": "'gee cha' — like 'gee, a train!'",
+              "similar": "기차역, 열차, 전철",
+              "status": "review",
+              "interval_days": 53,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.767
+            },
+            {
+              "term": "깜빡",
+              "meaning": "blink",
+              "base_form": "",
+              "example": "열 세고.. 돌아서니까 눈 깜빡 할 사이에 없어졌어",
+              "example_en": "I turned around, and in the blink of an eye, it was gone.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "낡다",
+              "meaning": "to be old, worn",
+              "base_form": "",
+              "example": "그러나 그것은 너무 낡았다",
+              "example_en": "But it is too old.",
+              "mnemonic": "",
+              "similar": "오래됐다, 헤졌다",
+              "status": "review",
+              "interval_days": 3,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
+            },
+            {
+              "term": "눈 뜨다",
+              "meaning": "open eyes",
+              "base_form": "",
+              "example": "눈 뜬다! 하하",
+              "example_en": "Open your eyes! Haha.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 12,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.493
+            },
+            {
+              "term": "느끼다",
+              "meaning": "to feel",
+              "base_form": "",
+              "example": "그녀는 두통과 인후통을 느낍니다.",
+              "example_en": "She feels a headache and a sore throat.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 11,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
+            },
+            {
+              "term": "늦잠",
+              "meaning": "sleeping in",
+              "base_form": "",
+              "example": "그 다음날, 일요일에 늦잠 잤어요",
+              "example_en": "The next day, on Sunday, I slept in.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "늦잠 자다",
+              "meaning": "slept in",
+              "base_form": "",
+              "example": "그 다음날, 일요일에 늦잠 잤어요",
+              "example_en": "The next day, on Sunday, I slept in.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "다녀오다",
+              "meaning": "went and came back",
+              "base_form": "다니다",
+              "example": "여행도 다녀왔어요.",
+              "example_en": "I also went on a trip and came back.",
+              "mnemonic": "",
+              "similar": "돌아오다, 가다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "다른",
+              "meaning": "other",
+              "base_form": "",
+              "example": "그리고 요거트 스무디나 다른 음료는 설탕이 많아서 많이…",
+              "example_en": "And yogurt smoothies or other drinks have a lot of sugar, so…",
+              "mnemonic": "",
+              "similar": "별의, 추가의",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "달달하다",
+              "meaning": "was sweet",
+              "base_form": "",
+              "example": "달달했어요",
+              "example_en": "It was sweet.",
+              "mnemonic": "",
+              "similar": "달콤하다, 단맛",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "대신",
+              "meaning": "instead",
+              "base_form": "",
+              "example": "대신 그녀는 기차 시간표를 확인한다",
+              "example_en": "Instead, she checks the train schedule.",
+              "mnemonic": "'dae-sin' — 'big sin' to NOT do it, so do this instead",
+              "similar": "대체로, 바꿔서",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 5,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "대학생",
+              "meaning": "university student",
+              "base_form": "",
+              "example": "루이는 대학생입니다",
+              "example_en": "Louie is a university student",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 12,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.493
+            },
+            {
+              "term": "돌아오다",
+              "meaning": "returned",
+              "base_form": "",
+              "example": "그리고 집에 돌아왔어요",
+              "example_en": "And I returned home.",
+              "mnemonic": "",
+              "similar": "들어오다, 복귀하다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "동기",
+              "meaning": "classmates",
+              "base_form": "",
+              "example": "토요일에는 대학 동기들을 만났어요",
+              "example_en": "I met my college classmates on Saturday.",
+              "mnemonic": "",
+              "similar": "친구, 동창",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "동네",
+              "meaning": "neighborhood",
+              "base_form": "",
+              "example": "익선동은 제가 좋아하는 동네예요",
+              "example_en": "Iksandong is a neighborhood I like.",
+              "mnemonic": "",
+              "similar": "마을, 지역",
+              "status": "learning",
+              "interval_days": 0,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.1
+            },
+            {
+              "term": "두통",
+              "meaning": "headache",
+              "base_form": "",
+              "example": "그녀는 두통과 인후통을 느낍니다.",
+              "example_en": "She feels a headache and a sore throat.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "또한",
+              "meaning": "also",
+              "base_form": "",
+              "example": "또한 그녀는 재채기를 많이 합니다",
+              "example_en": "Also, she sneezes a lot.",
+              "mnemonic": "'toe-han' — adding another point",
+              "similar": "더불어, 역시",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 4,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "마음먹다",
+              "meaning": "to decide, make up one's mind",
+              "base_form": "",
+              "example": "일하러 기차를 타고 가기로 마음먹는다",
+              "example_en": "He decides to take the train to work.",
+              "mnemonic": "'ma-eum' — 'mind' + 'meok-' — 'eats' a decision",
+              "similar": "결정하다, 정하다",
+              "status": "review",
+              "interval_days": 5,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
+            },
+            {
+              "term": "몇",
+              "meaning": "several",
+              "base_form": "",
+              "example": "그러나 먼저, 그는 몇 가지의 시험을 쳐야 합니다",
+              "example_en": "But first, he has to take several exams",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "목록",
+              "meaning": "list",
+              "base_form": "",
+              "example": "그는 온라인으로 개봉 영화 목록을 확인합니다",
+              "example_en": "He checks the list of released movies online.",
+              "mnemonic": "'mok-rok' — catalog of items",
+              "similar": "리스트를, 명단을",
+              "status": "review",
+              "interval_days": 5,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
+            },
+            {
+              "term": "몸",
+              "meaning": "body",
+              "base_form": "",
+              "example": "커피를 너무 많이 마셔서 몸이 안 좋아지는 것 같아서.",
+              "example_en": "I feel like my body is not doing well because I drank too much coffee.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 11,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
+            },
+            {
+              "term": "몸이 좋지 않다",
+              "meaning": "to not feel well",
+              "base_form": "",
+              "example": "엠마는 몸이 좋지 않습니다.",
+              "example_en": "Emma is not feeling well.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 5,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
+            },
+            {
+              "term": "바뀌다",
+              "meaning": "changed",
+              "base_form": "",
+              "example": "배경이 바뀌었죠",
+              "example_en": "The background has changed",
+              "mnemonic": "",
+              "similar": "변하다, 교체되다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "바쁘다",
+              "meaning": "was busy",
+              "base_form": "",
+              "example": "저는 그동안 조금 바빴어요",
+              "example_en": "I was a little busy during that time.",
+              "mnemonic": "",
+              "similar": "바쁘다, 분주하다",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "바지",
+              "meaning": "pants",
+              "base_form": "",
+              "example": "그녀에게 검정 바지가 보인다",
+              "example_en": "She sees black pants.",
+              "mnemonic": "",
+              "similar": "치마, 반바지",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "방금",
+              "meaning": "just",
+              "base_form": "",
+              "example": "어? 방금 전까지만 해도 여기 있었는데",
+              "example_en": "Huh? It was here just a moment ago.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "별로",
+              "meaning": "not really",
+              "base_form": "",
+              "example": "많을 때도 있고 사람이 별로 없을 때도 있어요.",
+              "example_en": "There are times when there are many people and times when there are not many.",
+              "mnemonic": "",
+              "similar": "그다지, 크게",
+              "status": "learning",
+              "interval_days": 0,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.1
+            },
+            {
+              "term": "병원",
+              "meaning": "hospital",
+              "base_form": "",
+              "example": "그녀는 병원에 가기로 결정합니다",
+              "example_en": "She decides to go to the hospital.",
+              "mnemonic": "'byeong-won' — place for the unwell",
+              "similar": "의원에, 클리닉에",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "보내다",
+              "meaning": "to spend",
+              "base_form": "",
+              "example": "그래서 올해도 행복한 추석을 보냈어요.",
+              "example_en": "So this year, I also spent a happy Chuseok.",
+              "mnemonic": "",
+              "similar": "지내다, 경험하다",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "복숭아",
+              "meaning": "peach",
+              "base_form": "",
+              "example": "복숭아 프레임이었어요",
+              "example_en": "It was a peach frame.",
+              "mnemonic": "",
+              "similar": "사과, 배",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "살다",
+              "meaning": "live",
+              "base_form": "",
+              "example": "여러분은 어떤 집에 살고 있어요?",
+              "example_en": "What kind of house are you living in?",
+              "mnemonic": "",
+              "similar": "거주하다, 머물다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "생일",
+              "meaning": "birthday",
+              "base_form": "",
+              "example": "이번 주말은 루이 친구의 생일입니다",
+              "example_en": "This weekend is Louie's friend's birthday",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 11,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
+            },
+            {
+              "term": "생활",
+              "meaning": "life",
+              "base_form": "",
+              "example": "그래서 회사 생활이 어떤지 이야기했어요",
+              "example_en": "So we talked about what company life is like.",
+              "mnemonic": "",
+              "similar": "인생, 일상",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "설명하다",
+              "meaning": "to explain",
+              "base_form": "",
+              "example": "의사에게 그녀가 어떻게 느끼는지 설명합니다",
+              "example_en": "She explains to the doctor how she feels.",
+              "mnemonic": "'sul-myung' — clear description",
+              "similar": "이야기합니다, 말합니다",
+              "status": "review",
+              "interval_days": 3,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
+            },
+            {
+              "term": "수업",
+              "meaning": "class",
+              "base_form": "",
+              "example": "수업도 많이 하고",
+              "example_en": "I also attend many classes",
+              "mnemonic": "",
+              "similar": "강의, 교실",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "시간 정도 시간을",
+              "meaning": "In about an hour&nbsp;",
+              "base_form": "",
+              "example": "카페에서 두 시간 정도 시간을 보냈어요",
+              "example_en": "I spent about two hours at the cafe.",
+              "mnemonic": "",
+              "similar": "시각, 기간",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "시간표",
+              "meaning": "timetable",
+              "base_form": "",
+              "example": "우선 그녀는 버스 시간표를 확인한다",
+              "example_en": "First, she checks the bus timetable.",
+              "mnemonic": "",
+              "similar": "일정표, 계획표",
+              "status": "review",
+              "interval_days": 50,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.756
+            },
+            {
+              "term": "시험",
+              "meaning": "exams",
+              "base_form": "",
+              "example": "먼저, 그는 몇 가지의 시험을 쳐야 합니다",
+              "example_en": "First, he has to take several exams",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 8,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
+            },
+            {
+              "term": "얻다",
+              "meaning": "to get, obtain",
+              "base_form": "",
+              "example": "제리는 하루 휴가를 얻었습니다.",
+              "example_en": "Jerry got a day off.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 3,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
+            },
+            {
+              "term": "여행",
+              "meaning": "trip",
+              "base_form": "",
+              "example": "여행도 다녀왔어요",
+              "example_en": "I also went on a trip",
+              "mnemonic": "",
+              "similar": "여정, 관광",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "역시",
+              "meaning": "as expected",
+              "base_form": "",
+              "example": "역시 민지는 꾸미는 걸 잘",
+              "example_en": "As expected, Minji is good at decorating",
+              "mnemonic": "",
+              "similar": "과연, 역시나",
+              "status": "review",
+              "interval_days": 3,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
+            },
+            {
+              "term": "오랜만",
+              "meaning": "long time",
+              "base_form": "",
+              "example": "여러분 너무 오랜만입니다",
+              "example_en": "It's been such a long time, everyone",
+              "mnemonic": "",
+              "similar": "오래간만, 오래",
+              "status": "learning",
+              "interval_days": 0,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.1
+            },
+            {
+              "term": "옷장",
+              "meaning": "closet",
+              "base_form": "",
+              "example": "그녀는 자신의 옷장을 들여다본다",
+              "example_en": "She looks into her closet.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 13,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.508
+            },
+            {
+              "term": "왜냐하면",
+              "meaning": "because",
+              "base_form": "",
+              "example": "왜냐하면 회사에 가는 것이 힘들었어요.",
+              "example_en": "Because going to the company was difficult.",
+              "mnemonic": "",
+              "similar": "때문에, 그래서",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "우선",
+              "meaning": "first",
+              "base_form": "",
+              "example": "우선 그녀는 버스 시간표를 확인한다",
+              "example_en": "First, she checks the bus timetable.",
+              "mnemonic": "",
+              "similar": "먼저, 첫째로",
+              "status": "review",
+              "interval_days": 5,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.345
+            },
+            {
+              "term": "의사",
+              "meaning": "doctor",
+              "base_form": "",
+              "example": "그녀는 의사에게 그녀가 어떻게 느끼는지 설명합니다",
+              "example_en": "She explains to the doctor how she feels.",
+              "mnemonic": "'E say' — talking to the doctor",
+              "similar": "의사한테, 의사께",
+              "status": "review",
+              "interval_days": 11,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.478
+            },
+            {
+              "term": "이동하다",
+              "meaning": "moved",
+              "base_form": "",
+              "example": "타코를 먹고 수제 맥주집으로 이동했어요",
+              "example_en": "After eating tacos, we moved to a craft beer place.",
+              "mnemonic": "",
+              "similar": "가다, 옮기다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "이불",
+              "meaning": "blanket",
+              "base_form": "",
+              "example": "미미 넌, 이불 안 개고 지금 뭐",
+              "example_en": "Mimi, what are you doing without folding the blanket?",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 4,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.31
+            },
+            {
+              "term": "인후통",
+              "meaning": "sore throat",
+              "base_form": "",
+              "example": "그녀는 두통과 인후통을 느낍니다.",
+              "example_en": "She feels a headache and a sore throat.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 8,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
+            },
+            {
+              "term": "일본",
+              "meaning": "Japan",
+              "base_form": "",
+              "example": "지지난주에 일본 도쿄로 여행을 다녀왔어요.",
+              "example_en": "I went on a trip to Tokyo, Japan two weeks ago.",
+              "mnemonic": "",
+              "similar": "한국, 중국",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "일요일",
+              "meaning": "Sunday",
+              "base_form": "",
+              "example": "그 다음날, 일요일에 늦잠 잤어요",
+              "example_en": "The next day, on Sunday, I slept in.",
+              "mnemonic": "",
+              "similar": "토요일, 월요일",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "일정",
+              "meaning": "schedule",
+              "base_form": "",
+              "example": "그리고 다음 주 일정을 짰어요",
+              "example_en": "And I planned next week's schedule.",
+              "mnemonic": "",
+              "similar": "스케줄, 계획",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "작년",
+              "meaning": "last year",
+              "base_form": "",
+              "example": "에휴~ 그 얘긴 작년에도 들었던 거 같은데",
+              "example_en": "Sigh~ I think I heard that story last year too.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "재채기",
+              "meaning": "sneeze",
+              "base_form": "",
+              "example": "또한 그녀는 재채기를 많이 합니다",
+              "example_en": "Also, she sneezes a lot.",
+              "mnemonic": "'jae-chae' — sound of sneezing",
+              "similar": "기침을, 콧물을",
+              "status": "review",
+              "interval_days": 9,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.443
+            },
+            {
+              "term": "적다",
+              "meaning": "writing",
+              "base_form": "",
+              "example": "자두 너의 하루를 적는 다고 생각하고",
+              "example_en": "Jadu, think of it as writing down your day",
+              "mnemonic": "",
+              "similar": "쓰다, 기록하다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "졸업하다",
+              "meaning": "graduate",
+              "base_form": "",
+              "example": "그는 이번 달에 졸업합니다",
+              "example_en": "He will graduate this month",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "주말",
+              "meaning": "weekend",
+              "base_form": "",
+              "example": "하지만, 이번 주말은 루이 친구의 생일입니다",
+              "example_en": "But this weekend is Louie's friend's birthday",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 13,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.508
+            },
+            {
+              "term": "지난주",
+              "meaning": "last week",
+              "base_form": "",
+              "example": "지난주에 새로운 집으로 이사를 왔습니다",
+              "example_en": "Last week, I moved to a new house",
+              "mnemonic": "",
+              "similar": "저번주, 지난번",
+              "status": "learning",
+              "interval_days": 0,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.1
+            },
+            {
+              "term": "지내다",
+              "meaning": "get along",
+              "base_form": "",
+              "example": "안녕하세요, 여러분! 잘 지냈어요?",
+              "example_en": "Hello, everyone! How have you been?",
+              "mnemonic": "",
+              "similar": "살다, 생활하다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "짜다",
+              "meaning": "planned",
+              "base_form": "",
+              "example": "그리고 다음 주 일정을 짰어요",
+              "example_en": "And I planned next week's schedule.",
+              "mnemonic": "",
+              "similar": "계획하다, 준비하다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "찍다",
+              "meaning": "to take",
+              "base_form": "",
+              "example": "사진 찍으러 갔어요",
+              "example_en": "I went to take photos.",
+              "mnemonic": "",
+              "similar": "촬영하다, 기록하다",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "초대하다",
+              "meaning": "invite",
+              "base_form": "",
+              "example": "루이의 친구는 그를 파티에 초대하고 싶습니다.",
+              "example_en": "Louis's friend wants to invite him to the party.",
+              "mnemonic": "",
+              "similar": "부르다, 청하다",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 2,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "최근",
+              "meaning": "recently",
+              "base_form": "",
+              "example": "제 대학 동기들은 최근에 취직을 했어요",
+              "example_en": "My college classmates recently got jobs.",
+              "mnemonic": "",
+              "similar": "요즘, 근래",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "출근",
+              "meaning": "going to work, commute",
+              "base_form": "",
+              "example": "그리고 출근을 해요",
+              "example_en": "And then I go to work.",
+              "mnemonic": "",
+              "similar": "퇴근, 근무",
+              "status": "review",
+              "interval_days": 3,
+              "lapses": 3,
+              "leech": false,
+              "suspended": false,
+              "health": 0.267
+            },
+            {
+              "term": "토요일",
+              "meaning": "on Saturday",
+              "base_form": "",
+              "example": "저는 토요일에는 친구들을 만났어요",
+              "example_en": "On Saturday, I met my friends.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "하루",
+              "meaning": "day",
+              "base_form": "",
+              "example": "오늘은 하루 일과에 대해서 이야기할 거예요.",
+              "example_en": "Today, we'll talk about the day's schedule.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 12,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.493
+            },
+            {
+              "term": "헤어지다",
+              "meaning": "parted ways",
+              "base_form": "",
+              "example": "그리고 대학 동기들과 헤어졌어요",
+              "example_en": "And I parted ways with my college classmates.",
+              "mnemonic": "",
+              "similar": "이별하다, 떠나다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "혹시",
+              "meaning": "perhaps",
+              "base_form": "",
+              "example": "혹시",
+              "example_en": "Perhaps.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "혼자",
+              "meaning": "alone",
+              "base_form": "",
+              "example": "준호는 혼자 자취를 해요.",
+              "example_en": "Junho lives alone.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 2,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.211
+            },
+            {
+              "term": "확인하다",
+              "meaning": "to check, confirm",
+              "base_form": "",
+              "example": "우선 그녀는 버스 시간표를 확인한다",
+              "example_en": "First, she checks the bus timetable.",
+              "mnemonic": "",
+              "similar": "점검하다, 검토하다",
+              "status": "review",
+              "interval_days": 1,
+              "lapses": 8,
+              "leech": true,
+              "suspended": false,
+              "health": 0.133
+            },
+            {
+              "term": "후",
+              "meaning": "after",
+              "base_form": "후에",
+              "example": "밥을 먹은 후에 과일하고 송편을 먹었어요.",
+              "example_en": "After eating rice, we ate fruits and songpyeon.",
+              "mnemonic": "",
+              "similar": "다음에, 이후에",
+              "status": "review",
+              "interval_days": 8,
+              "lapses": 1,
+              "leech": false,
+              "suspended": false,
+              "health": 0.423
+            },
+            {
+              "term": "휴가",
+              "meaning": "vacation",
+              "base_form": "",
+              "example": "제리는 하루 휴가를 얻었습니다.",
+              "example_en": "Jerry got a day off.",
+              "mnemonic": "",
+              "similar": "",
+              "status": "review",
+              "interval_days": 12,
+              "lapses": 0,
+              "leech": false,
+              "suspended": false,
+              "health": 0.493
             }
           ]
         }
