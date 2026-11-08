@@ -50,6 +50,7 @@ def build_data() -> dict:
     domains_cfg = json.loads((ROOT / "domains.json").read_text(encoding="utf-8"))
     cards = anki("findCards", query=f"deck:{DECK}")
     cards_info = anki("cardsInfo", cards=cards)
+    leech_ids = set(anki("findCards", query=f"deck:{DECK} tag:leech"))
 
     by_term: dict[str, dict] = {}
     for c in cards_info:
@@ -68,6 +69,9 @@ def build_data() -> dict:
             "similar": (f.get("SimilarWords") or {}).get("value", ""),
             "status": status,
             "interval_days": c.get("interval", 0) if c.get("type", 0) == 2 else 0,
+            "lapses": c.get("lapses", 0),
+            "leech": c.get("cardId") in leech_ids,
+            "suspended": c.get("queue", 0) == -1,
             "health": health,
         }
 
@@ -124,12 +128,44 @@ def build_data() -> dict:
         )
 
     overall = round(sum(w["health"] for w in by_term.values()) / len(by_term), 3) if by_term else 0.0
+    leeches = [
+        {
+            "term": w["term"],
+            "meaning": w["meaning"],
+            "base_form": w["base_form"],
+            "example": w["example"],
+            "example_en": w["example_en"],
+            "mnemonic": w["mnemonic"],
+            "similar": w["similar"],
+            "lapses": w["lapses"],
+            "suspended": w["suspended"],
+            "interval_days": w["interval_days"],
+            "status": w["status"],
+        }
+        for w in sorted(by_term.values(), key=lambda w: (-w["lapses"], w["term"]))
+        if w["leech"]
+    ]
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "deck": DECK,
         "total_words": len(by_term),
         "overall_health": overall,
+        "leeches": leeches,
         "domains": out_domains,
+    }
+
+
+def build_review() -> dict:
+    """Review history + scheduling snapshot for the Habits section."""
+    by_day = {d: int(n) for d, n in anki("getNumCardsReviewedByDay")}
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "by_day": by_day,
+        "today_reviewed": anki("getNumCardsReviewedToday"),
+        "due_now": len(anki("findCards", query=f"deck:{DECK} is:due")),
+        "due_tomorrow": len(anki("findCards", query=f"deck:{DECK} prop:due=1")),
+        "due_7d": len(anki("findCards", query=f"deck:{DECK} prop:due<=7")),
+        "total_cards": len(anki("findCards", query=f"deck:{DECK}")),
     }
 
 
@@ -146,3 +182,12 @@ if __name__ == "__main__":
     else:
         out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"wrote {out} — {data['total_words']} words, overall health {data['overall_health']}")
+
+    review = build_review()
+    review_out = ROOT / "public" / "review.json"
+    review_existing = json.loads(review_out.read_text(encoding="utf-8")) if review_out.exists() else {}
+    if _without_meta(review_existing) == _without_meta(review):
+        print("no change — public/review.json up to date")
+    else:
+        review_out.write_text(json.dumps(review, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"wrote {review_out} — {review['due_now']} due now, {review['due_7d']} due in 7d")

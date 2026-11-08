@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Korean Islands</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    html, body, #root { margin: 0; height: 100%; width: 100%; }
-    body { background: #0f1f2d; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    html, body, #root { margin: 0; min-height: 100%; }
+    body { background: #0c1620; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   </style>
+  <title>My Korean — Vocabulary Dashboard</title>
+  <meta name="theme-color" content="#0c1620" />
+  <meta name="description" content="A 3D archipelago of Korean vocabulary pulled from Anki." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="My Korean" />
+  <meta property="og:title" content="My Korean" />
+  <meta property="og:description" content="A 3D archipelago of Korean vocabulary pulled from Anki." />
+  <meta property="og:url" content="https://islands-green.vercel.app" />
+  <meta property="og:image" content="https://islands-green.vercel.app/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Korean" />
+  <meta name="twitter:description" content="A 3D archipelago of Korean vocabulary pulled from Anki." />
+  <meta name="twitter:image" content="https://islands-green.vercel.app/og.png" />
 </head>
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+<script>
+(function () {
+  var APP = 'islands';
+  var ENDPOINT = 'https://vault-theta-hazel.vercel.app/api/beacon';
+  function session() {
+    try {
+      var key = 'vault_session_v1';
+      var value = localStorage.getItem(key);
+      if (!value) {
+        value = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2);
+        localStorage.setItem(key, value);
+      }
+      return value;
+    } catch (e) { return ''; }
+  }
+  var lastTarget = '';
+  function send() {
+    var current = location.pathname + location.hash;
+    if (current === lastTarget) return;
+    lastTarget = current;
+    try {
+      var payload = JSON.stringify({
+        app: APP,
+        kind: 'view',
+        target: location.pathname + location.hash,
+        path: location.pathname + location.hash,
+        title: document.title,
+        session: session(),
+        referrer: document.referrer || ''
+      });
+      fetch(ENDPOINT, {
+        method: 'POST',
+        mode: 'cors',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+        body: payload,
+        keepalive: true
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', send);
+  else send();
+  window.addEventListener('hashchange', send);
+  window.addEventListener('popstate', send);
+})();
+</script>
 </body>
 </html>
