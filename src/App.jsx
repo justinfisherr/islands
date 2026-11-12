@@ -370,6 +370,19 @@ export default function App() {
     window.location.replace(m ? `/shadow?round=${m[1]}` : "/shadow");
   }, []);
 
+  // /?word=<term> from the shadow board: open that word in the browser. The row
+  // is keyed by the reference term, and the list is cut at 80, so seed the search
+  // with the row's own term or the expansion would have nothing to sit in.
+  useEffect(() => {
+    const term = new URLSearchParams(window.location.search).get("word");
+    if (!term || !words.has(term)) return;
+    const row = allWords.find((e) => e.t === term || e.word?.term === term);
+    if (!row) return;
+    setQuery(row.t);
+    setExpanded(row.t);
+    document.getElementById("words")?.scrollIntoView();
+  }, [words, allWords]);
+
   // ---- sync ----
   const pollSync = useCallback((id) => {
     const tick = () =>

@@ -178,8 +178,8 @@ export default function ShadowPage() {
             openRoundId={openRoundId}
             onToggleRound={toggleShadowRound}
             onDeleteRound={removeShadowRound}
-            onJumpToWord={() => {
-              window.location.href = "/#words";
+            onJumpToWord={(term) => {
+              window.location.href = `/?word=${encodeURIComponent(term)}`;
             }}
             deleting={deletingRound}
           />
