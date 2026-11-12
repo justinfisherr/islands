@@ -576,7 +576,7 @@ export default function App() {
         </div>
         <nav className="nav" aria-label="Sections">
           <a href="#overview">Overview</a>
-          <a href="/shadow">Shadow</a>
+          <a className="navlink" href="/shadow">Shadow</a>
           <a href="#grid">Grid</a>
           <a href="#habits">Habits</a>
           <a href="#leeches">Leeches</a>
@@ -657,6 +657,11 @@ export default function App() {
               {reloading ? "Refreshing your deck…" : "No deck data yet."}
             </div>
           )}
+
+          <div className="shadowcta">
+            <a href="/shadow">Practice shadowing</a>
+            <span className="note">Say ten sentences back and get scored.</span>
+          </div>
         </section>
 
         <section id="grid">

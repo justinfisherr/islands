@@ -664,3 +664,17 @@ h2 .h2mark { color: #ffd54f; margin-right: 8px; vertical-align: -2px; }
   .shadowcols { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 44px; align-items: start; }
 }
 .shadowwrap .srounds h2, .shadowwrap .sstats h2 { font-size: 15px; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.01em; }
+
+/* ---- /shadow entry points (scoreboard nav + Overview CTA) ---- */
+/* Shadow is a different page, not a section anchor: mint marks it as a destination. */
+.nav a.navlink { color: #4fc3a1; border-color: #4fc3a1; }
+.nav a.navlink:hover, .nav a.navlink:focus-visible { background: #4fc3a1; color: #0c1620; }
+
+.shadowcta { margin: 20px 0 0; }
+.shadowcta a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px;
+  border: 1px solid #4fc3a1; border-radius: 999px;
+  color: #4fc3a1; font-size: 14px; font-weight: 700; text-decoration: none;
+}
+.shadowcta a:hover, .shadowcta a:focus-visible { background: #4fc3a1; color: #0c1620; }
+.shadowcta .note { display: block; margin: 8px 0 0; font-size: 13px; color: #8fa6b8; }
