@@ -11,7 +11,7 @@ function ShadowStats({ stats, onJumpToWord }) {
   const max = Math.max(1, ...stats.by_day.map((d) => d.n));
   return (
     <div className="sstats">
-      <h3>Shadow stats</h3>
+      <h2>Shadow stats</h2>
       {empty ? (
         <div className="empty">Nothing to compare yet. Finish a round.</div>
       ) : (
@@ -204,63 +204,65 @@ export default function ShadowBoard({
           : '10 weakest words with sentences. About three minutes.'}
       </div>
 
-      <div className="srounds">
-        <h3>Rounds</h3>
-        <div className="chips">
-          {[
-            ['all', 'All'],
-            ['mic', 'Mic'],
-            ['self', 'Self-mark'],
-          ].map(([k, l]) => (
-            <button key={k} type="button" className="chip" aria-pressed={modeFilter === k} onClick={() => setModeFilter(k)}>
-              {l}
-            </button>
-          ))}
-        </div>
-        <div className="chips">
-          {[
-            ['newest', 'Newest'],
-            ['worst', 'Worst first'],
-          ].map(([k, l]) => (
-            <button key={k} type="button" className="chip" aria-pressed={sort === k} onClick={() => setSort(k)}>
-              {l}
-            </button>
-          ))}
-        </div>
-
-        {load === 'error' ? (
-          <div className="snotice sand">
-            Could not load past rounds. The round still works.{' '}
-            <button type="button" className="spill" onClick={onReload}>
-              Retry
-            </button>
-          </div>
-        ) : load === 'loading' && !rounds.length ? (
-          <div className="empty">Loading rounds…</div>
-        ) : !visible.length ? (
-          <div className="empty">
-            {rounds.length ? 'No rounds match that filter.' : 'No rounds yet. Ten words is about three minutes.'}
-          </div>
-        ) : (
-          <div className="rlist">
-            {visible.map((r) => (
-              <div key={r.id}>
-                <RoundRow round={r} expanded={openRoundId === r.id} onToggle={onToggleRound} />
-                {openRoundId === r.id ? (
-                  <RoundDetail
-                    round={r}
-                    onClose={() => onToggleRound(r.id)}
-                    onDelete={onDeleteRound}
-                    busy={deleting === r.id}
-                  />
-                ) : null}
-              </div>
+      <div className="shadowcols">
+        <div className="srounds">
+          <h2>Rounds</h2>
+          <div className="chips">
+            {[
+              ['all', 'All'],
+              ['mic', 'Mic'],
+              ['self', 'Self-mark'],
+            ].map(([k, l]) => (
+              <button key={k} type="button" className="chip" aria-pressed={modeFilter === k} onClick={() => setModeFilter(k)}>
+                {l}
+              </button>
             ))}
           </div>
-        )}
-      </div>
+          <div className="chips">
+            {[
+              ['newest', 'Newest'],
+              ['worst', 'Worst first'],
+            ].map(([k, l]) => (
+              <button key={k} type="button" className="chip" aria-pressed={sort === k} onClick={() => setSort(k)}>
+                {l}
+              </button>
+            ))}
+          </div>
 
-      <ShadowStats stats={stats} onJumpToWord={onJumpToWord} />
+          {load === 'error' ? (
+            <div className="snotice sand">
+              Could not load past rounds. The round still works.{' '}
+              <button type="button" className="spill" onClick={onReload}>
+                Retry
+              </button>
+            </div>
+          ) : load === 'loading' && !rounds.length ? (
+            <div className="empty">Loading rounds…</div>
+          ) : !visible.length ? (
+            <div className="empty">
+              {rounds.length ? 'No rounds match that filter.' : 'No rounds yet. Ten words is about three minutes.'}
+            </div>
+          ) : (
+            <div className="rlist">
+              {visible.map((r) => (
+                <div key={r.id}>
+                  <RoundRow round={r} expanded={openRoundId === r.id} onToggle={onToggleRound} />
+                  {openRoundId === r.id ? (
+                    <RoundDetail
+                      round={r}
+                      onClose={() => onToggleRound(r.id)}
+                      onDelete={onDeleteRound}
+                      busy={deleting === r.id}
+                    />
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <ShadowStats stats={stats} onJumpToWord={onJumpToWord} />
+      </div>
     </>
   );
 }

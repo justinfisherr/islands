@@ -655,3 +655,12 @@ h2 .h2mark { color: #ffd54f; margin-right: 8px; vertical-align: -2px; }
   .sdot { animation: none; }
   .sbtn, .chip, .spill { transition: none; }
 }
+
+/* ---- Shadow page (/shadow) ---- */
+.shadowwrap { max-width: 1120px; }
+.shadowwrap .srounds, .shadowwrap .sstats { max-width: none; margin: 0; }
+.shadowcols { display: grid; gap: 30px; margin: 30px 0 0; }
+@media (min-width: 900px) {
+  .shadowcols { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 44px; align-items: start; }
+}
+.shadowwrap .srounds h2, .shadowwrap .sstats h2 { font-size: 15px; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.01em; }

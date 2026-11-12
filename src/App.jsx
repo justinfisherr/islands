@@ -1,8 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import ShadowBoard from "./components/shadow/ShadowBoard.jsx";
-import ShadowRound from "./components/shadow/ShadowRound.jsx";
-import { flattenWords, islandsOf, pickRound } from "./lib/shadow/select.js";
-import { deleteRound, fetchShadow, flushQueue } from "./lib/shadow/save.js";
 
 const SYNC_API = "https://home-lilac-five.vercel.app/api/sync";
 const SYNC_TOKEN = import.meta.env.VITE_SYNC_TOKEN || "";
@@ -366,143 +362,12 @@ export default function App() {
     [coverage.known, rate],
   );
 
-  // ---- shadow ----
-  const shadowWords = useMemo(() => flattenWords(data), [data]);
-  const shadowIslands = useMemo(() => islandsOf(shadowWords), [shadowWords]);
-  const [shadowMode, setShadowMode] = useState(() => {
-    try {
-      return localStorage.getItem("shadow_mode_v1") === "self" ? "self" : "mic";
-    } catch {
-      return "mic";
-    }
-  });
-  const [shadowMicBlocked, setShadowMicBlocked] = useState(false);
-  const [shadowSource, setShadowSource] = useState("weakest");
-  const [shadowIsland, setShadowIsland] = useState("");
-  const [round, setRound] = useState(null);
-  const [shadowRounds, setShadowRounds] = useState([]);
-  const [shadowStats, setShadowStats] = useState(null);
-  const [shadowLoad, setShadowLoad] = useState("loading"); // loading | done | error
-  const [openRoundId, setOpenRoundId] = useState(null);
-  const [deletingRound, setDeletingRound] = useState(null);
-
-  const loadShadow = useCallback(async () => {
-    setShadowLoad("loading");
-    try {
-      const d = await fetchShadow({ limit: 30 });
-      setShadowRounds(Array.isArray(d.rounds) ? d.rounds : []);
-      setShadowStats(d.stats || null);
-      setShadowLoad("done");
-    } catch {
-      setShadowLoad("error");
-    }
-  }, []);
-
-  // Flush whatever the last session could not save, then read the history.
+  // Shadow lives on its own page now; the old #shadow deep links still land.
   useEffect(() => {
-    flushQueue()
-      .catch(() => {})
-      .then(loadShadow);
-  }, [loadShadow]);
-
-  const setShadowModePersist = useCallback((next, reason) => {
-    setShadowMode(next);
-    if (reason === "denied") setShadowMicBlocked(true);
-    try {
-      localStorage.setItem("shadow_mode_v1", next);
-    } catch {
-      /* private window */
-    }
-  }, []);
-
-  const startShadowRound = useCallback(
-    (exclude = []) => {
-      const picked = pickRound(shadowWords, shadowRounds, {
-        source: shadowSource,
-        island: shadowIsland,
-        exclude,
-      });
-      if (!picked.length) return;
-      let islandName = null;
-      if (shadowSource === "island") {
-        for (const g of shadowIslands) {
-          for (const isl of g.islands) if (isl.id === shadowIsland) islandName = isl.name;
-        }
-      }
-      setRound({
-        id: Date.now(),
-        words: picked,
-        source: shadowSource,
-        island: islandName,
-        mode: shadowMode,
-      });
-    },
-    [shadowWords, shadowRounds, shadowSource, shadowIsland, shadowMode, shadowIslands],
-  );
-
-  const leaveShadowRound = useCallback(() => {
-    setRound(null);
-    setOpenRoundId(null);
-    // Let the finish/attempt queue land before reading history back.
-    flushQueue()
-      .catch(() => {})
-      .then(loadShadow);
-    window.setTimeout(() => document.getElementById("shadow-start")?.focus(), 0);
-  }, [loadShadow]);
-
-  const toggleShadowRound = useCallback((id) => {
-    setOpenRoundId((cur) => {
-      const next = cur === id ? null : id;
-      try {
-        history.replaceState(null, "", next ? `#shadow/round/${next}` : "#shadow");
-      } catch {
-        /* file:// */
-      }
-      return next;
-    });
-    if (openRoundId === id) window.setTimeout(() => document.getElementById(`rrow-${id}`)?.focus(), 0);
-  }, [openRoundId]);
-
-  const removeShadowRound = useCallback(
-    async (id) => {
-      setDeletingRound(id);
-      try {
-        await deleteRound(id);
-        setOpenRoundId(null);
-        await loadShadow();
-      } catch {
-        /* the row stays; nothing was destroyed */
-      } finally {
-        setDeletingRound(null);
-      }
-    },
-    [loadShadow],
-  );
-
-  const jumpToShadowWord = useCallback(
-    (term) => {
-      if (!term) return;
-      setQuery("");
-      setQ("");
-      setFilter("all");
-      setPosFilter("all");
-      setExpanded(term);
-      window.setTimeout(() => document.getElementById("words")?.scrollIntoView(), 0);
-    },
-    [],
-  );
-
-  // Deep links: #shadow/round/<id> expands that round.
-  useEffect(() => {
-    const read = () => {
-      const m = /^#shadow\/round\/(\d+)$/.exec(window.location.hash || "");
-      if (!m) return;
-      setOpenRoundId(Number(m[1]));
-      window.setTimeout(() => document.getElementById("shadow")?.scrollIntoView(), 0);
-    };
-    read();
-    window.addEventListener("hashchange", read);
-    return () => window.removeEventListener("hashchange", read);
+    const h = window.location.hash || "";
+    if (!h.startsWith("#shadow")) return;
+    const m = /^#shadow\/round\/(\d+)$/.exec(h);
+    window.location.replace(m ? `/shadow?round=${m[1]}` : "/shadow");
   }, []);
 
   // ---- sync ----
@@ -691,14 +556,14 @@ export default function App() {
 
   return (
     <div>
-      <div className="page" inert={round ? true : undefined}>
+      <div className="page">
       <header className="topbar">
         <div className="brand">
           My <em>Korean</em>
         </div>
         <nav className="nav" aria-label="Sections">
           <a href="#overview">Overview</a>
-          <a href="#shadow">Shadow</a>
+          <a href="/shadow">Shadow</a>
           <a href="#grid">Grid</a>
           <a href="#habits">Habits</a>
           <a href="#leeches">Leeches</a>
@@ -779,30 +644,6 @@ export default function App() {
               {reloading ? "Refreshing your deck…" : "No deck data yet."}
             </div>
           )}
-        </section>
-
-        <section id="shadow">
-          <h2>Shadow</h2>
-          <ShadowBoard
-            islands={shadowIslands}
-            rounds={shadowRounds}
-            stats={shadowStats}
-            load={shadowLoad}
-            mode={shadowMode}
-            onMode={setShadowModePersist}
-            micBlocked={shadowMicBlocked}
-            source={shadowSource}
-            onSource={setShadowSource}
-            island={shadowIsland}
-            onIsland={setShadowIsland}
-            onStart={() => startShadowRound()}
-            onReload={loadShadow}
-            openRoundId={openRoundId}
-            onToggleRound={toggleShadowRound}
-            onDeleteRound={removeShadowRound}
-            onJumpToWord={jumpToShadowWord}
-            deleting={deletingRound}
-          />
         </section>
 
         <section id="grid">
@@ -1190,21 +1031,6 @@ export default function App() {
         </footer>
       </main>
       </div>
-      {round ? (
-        <ShadowRound
-          key={round.id}
-          words={round.words}
-          source={round.source}
-          island={round.island}
-          mode={round.mode}
-          onModeChange={setShadowModePersist}
-          onLeave={leaveShadowRound}
-          onNewRound={(exclude) => {
-            setRound(null);
-            startShadowRound(exclude);
-          }}
-        />
-      ) : null}
     </div>
   );
 }
