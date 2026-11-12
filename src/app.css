@@ -619,7 +619,7 @@ h2 .h2mark { color: #ffd54f; margin-right: 8px; vertical-align: -2px; }
 .sverdict.fail { color: #ff6b9d; }
 .sgate { font-size: 12px; color: #8fa6b8; }
 .sheard, .sref { font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
-.slabel { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6f8698; margin-bottom: 2px; }
+.slabel { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6f8698; margin-bottom: 2px; }
 .sheardtext { color: #eaf2f7; }
 .sref .sdiff { color: #a8c2d4; }
 .sdiff .syl.wrong { color: #ff6b9d; text-decoration: underline; text-underline-offset: 3px; }
