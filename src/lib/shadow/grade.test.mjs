@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { grade, syllables, align, keySpan } from './grade.js';
+import { grade, syllables, align, keySpan, endingOnly } from './grade.js';
 
 const REF = '연희는 슬픈 마음으로 나가요.';
 const TERM = '슬프다';
@@ -166,6 +166,16 @@ test('grade: deterministic', () => {
 test('align: identical arrays are all matches', () => {
   assert.deepEqual(align(['가', '나'], ['가', '나']), ['match', 'match']);
   assert.deepEqual(align([], []), []);
+});
+
+// The result screen names the gate that failed, and says "ending not heard"
+// only when the tail is the whole story.
+test('endingOnly: a dropped tail is true, a mid-sentence error is false', () => {
+  assert.equal(endingOnly(grade('연희는 슬픈 마음으로', REF).diff), true);
+  assert.equal(endingOnly(grade('연희는 슬퍼 마음으로 나가요', REF).diff), false);
+  assert.equal(endingOnly(grade(REF, REF).diff), false);
+  assert.equal(endingOnly([]), false);
+  assert.equal(endingOnly(null), false);
 });
 
 test('syllables: keeps only precomposed Hangul, NFC-normalised, capped at 200', () => {

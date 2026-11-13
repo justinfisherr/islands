@@ -13,6 +13,15 @@ export function syllables(s) {
   return (String(s ?? '').normalize('NFC').match(HANGUL) || []).slice(0, 200);
 }
 
+// True when everything missing sits after the last matched syllable, i.e. the
+// recognizer ended early rather than a word in the middle going wrong.
+export function endingOnly(diff) {
+  if (!Array.isArray(diff) || !diff.length) return false;
+  const last = diff.map((d) => d.kind).lastIndexOf('match');
+  const tail = diff.slice(last + 1);
+  return tail.length > 0 && tail.every((d) => d.kind === 'dropped');
+}
+
 // Levenshtein over syllable arrays. Fixed backtrace order (match, sub, del,
 // ins — first match wins) so the same pair always yields the same diff.
 export function align(ref, heard) {
