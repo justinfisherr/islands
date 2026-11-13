@@ -12,6 +12,8 @@ export default function ScoreRead({
   diff,
   passed,
   flagged,
+  keyed,
+  keyOk,
 }) {
   const band = passed ? 'pass' : score >= 50 ? 'close' : 'fail';
   const verdict = passed ? 'passed' : score >= 50 ? 'close' : 'missed';
@@ -24,6 +26,7 @@ export default function ScoreRead({
       <div className="sgate">
         accuracy {accuracy} · completeness {completeness} · gate 75 / 90
       </div>
+      {keyed && !keyOk ? <div className="sgate">main word missed</div> : null}
       <div className="sheard">
         <span className="slabel">Heard</span>
         <span className="sheardtext">{heard || '—'}</span>

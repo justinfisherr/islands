@@ -1,4 +1,5 @@
 import pg from 'pg'
+import { grade } from '../src/lib/shadow/grade.js'
 
 // Shadowing: rounds + attempts. Same plumbing as api/level.js — one pool, one
 // memoized schema promise, no driver text in responses.
@@ -292,8 +293,10 @@ async function opAttempt(body) {
     if (accuracy === null || completeness === null || scoreValue === null) {
       return [400, { error: 'accuracy, completeness and score required for mic' }]
     }
-    // Recomputed here so the client cannot drift from the gate.
-    passed = accuracy >= 75 && completeness >= 90
+    // Recomputed here so the client cannot drift from the gate. The target word
+    // has to be right too: a mangled deck word must not land as a pass.
+    const g = grade(transcript, reference, term)
+    passed = accuracy >= 75 && completeness >= 90 && (!g || g.keyOk)
   } else {
     passed = body.passed === true
   }
