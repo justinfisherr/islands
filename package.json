@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test src/lib/shadow/grade.test.mjs"
+    "test": "node --test src/lib/shadow/grade.test.mjs src/lib/shadow/recognize.test.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",

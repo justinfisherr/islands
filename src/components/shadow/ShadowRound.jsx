@@ -154,7 +154,7 @@ export default function ShadowRound({ words, source, island, mode, onModeChange,
   const finishAttempt = useCallback(
     (text) => {
       if (!word) return;
-      const g = grade(text, word.example);
+      const g = grade(text, word.example, word.term);
       setHeard(text);
       setInterim('');
       if (!g) {
@@ -351,6 +351,8 @@ export default function ShadowRound({ words, source, island, mode, onModeChange,
               passed: !!result?.passed,
               score: self ? null : result?.score ?? null,
               selfMarked: self,
+              keyed: !!result?.keyed,
+              keyOk: self ? true : !!result?.keyOk,
             });
           } else {
             setAttempt(attempt + 1);
@@ -417,7 +419,9 @@ export default function ShadowRound({ words, source, island, mode, onModeChange,
             ? interim || 'Listening. Say the sentence.'
             : phase === 'listen'
               ? heardNothing
-                ? 'Heard nothing. The mic opened but no speech came through. No attempt used.'
+                ? heard
+                  ? `Heard “${heard}” — no Korean in it. No attempt used.`
+                  : 'Heard nothing. The mic opened but no speech came through. No attempt used.'
                 : denied
                   ? 'The browser blocked the microphone. Self-mark still works.'
                   : 'Listening is one tap away.'
@@ -448,6 +452,8 @@ export default function ShadowRound({ words, source, island, mode, onModeChange,
               reference={word.example}
               diff={result.diff}
               passed={result.passed}
+              keyed={result.keyed}
+              keyOk={result.keyOk}
               flagged={!result.passed && attempt >= MAX_ATTEMPTS}
             />
           )

@@ -2,6 +2,11 @@
 // continuous:false + interimResults:true + an 8s watchdog, because Chrome's
 // recognizer ends on ~1s of silence and a short Korean sentence can end the
 // session early. An empty final transcript is heard-nothing, not a zero.
+//
+// The text the user watches is interim. Chrome often ends the session without
+// finalising it, and some builds never fire onend after stop(), so the last
+// non-empty text (final + interim) is the transcript, and stop() always
+// settles on a timer rather than trusting onend.
 const SR =
   typeof window !== 'undefined'
     ? window.SpeechRecognition || window.webkitSpeechRecognition || null
@@ -26,23 +31,48 @@ export function createRecognizer({ onInterim, onFinal, onHeardNothing, onDenied,
   r.maxAlternatives = 1;
 
   let finalText = '';
+  let interimText = '';
   let watchdog = null;
+  let settleTimer = null;
   let settled = false;
   let cancelled = false;
   let denied = false;
 
   const clear = () => {
     if (watchdog) clearTimeout(watchdog);
+    if (settleTimer) clearTimeout(settleTimer);
     watchdog = null;
+    settleTimer = null;
   };
 
+  // One verdict per session, whichever of onend / the settle timer gets here first.
+  const settle = () => {
+    if (settled || cancelled) return;
+    settled = true;
+    clear();
+    // Concatenated, not either/or: a finalised head plus an interim tail is one
+    // sentence, and grading only the head marks the screen's text wrong.
+    const text = (finalText + interimText).trim();
+    if (text) {
+      if (onFinal) onFinal(text);
+      return;
+    }
+    if (denied) return;
+    if (onHeardNothing) onHeardNothing();
+  };
+
+  // Rebuilt from every result each event: resultIndex + append loses chunks
+  // when the browser revises an earlier result in place.
   r.onresult = (e) => {
+    let fin = '';
     let interim = '';
-    for (let i = e.resultIndex; i < e.results.length; i += 1) {
+    for (let i = 0; i < e.results.length; i += 1) {
       const chunk = e.results[i][0]?.transcript || '';
-      if (e.results[i].isFinal) finalText += chunk;
+      if (e.results[i].isFinal) fin += chunk;
       else interim += chunk;
     }
+    finalText = fin;
+    interimText = interim;
     if (interim && onInterim) onInterim(interim.trim());
   };
 
@@ -55,21 +85,11 @@ export function createRecognizer({ onInterim, onFinal, onHeardNothing, onDenied,
       if (onDenied) onDenied();
       return;
     }
+    if (finalText || interimText) return; // a live transcript outranks an error code
     if (onError) onError(code);
   };
 
-  r.onend = () => {
-    clear();
-    if (cancelled || settled) return;
-    settled = true;
-    const text = finalText.trim();
-    if (text) {
-      if (onFinal) onFinal(text);
-      return;
-    }
-    if (denied) return;
-    if (onHeardNothing) onHeardNothing();
-  };
+  r.onend = settle;
 
   const stop = () => {
     clear();
@@ -78,6 +98,8 @@ export function createRecognizer({ onInterim, onFinal, onHeardNothing, onDenied,
     } catch {
       /* already stopped */
     }
+    // Some builds never fire onend after stop(); do not leave the UI recording.
+    if (!settled && !cancelled) settleTimer = setTimeout(settle, 1200);
   };
 
   return {
@@ -85,7 +107,10 @@ export function createRecognizer({ onInterim, onFinal, onHeardNothing, onDenied,
     start() {
       cancelled = false;
       settled = false;
+      denied = false;
       finalText = '';
+      interimText = '';
+      clear();
       try {
         r.start();
       } catch {
