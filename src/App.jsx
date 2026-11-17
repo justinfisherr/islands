@@ -406,9 +406,15 @@ export default function App() {
             if (t.finished) {
               clearInterval(iv);
               resolve(t);
-            } else if (tries >= 100) {
+            } else if (tries >= 400) {
+              // ~20 min. A sync that adds words has to fetch audio/images and
+              // push them to AnkiWeb, which can outlast any sane poll window —
+              // say so instead of pretending the run failed.
               clearInterval(iv);
-              reject(new Error("sync timed out"));
+              resolve({
+                status: "pending",
+                summary: "still running on kairi — the deck refreshes when it finishes",
+              });
             }
           } catch (err) {
             clearInterval(iv);
@@ -458,7 +464,7 @@ export default function App() {
   function finishText(r) {
     if (r.status === "done") return r.summary;
     if (r.status === "error") return r.summary || "sync failed";
-    return "sync finished";
+    return r.summary || "sync finished";
   }
 
   const clearLeech = useCallback(

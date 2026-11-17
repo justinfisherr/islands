@@ -1,37 +1,65 @@
 #!/usr/bin/env python3
 """Regenerate `public/data.json` (the Korean Islands snapshot) from Anki.
 
-Run on the VM (where AnkiConnect lives). Reads `domains.json` for the word →
-domain → island mapping, pulls live card state from AnkiConnect, and writes the
-snapshot the 3D app loads. Only rewrites when word data actually changed.
+Reads `domains.json` for the word → domain → island mapping, reads live card
+state straight out of the Anki collection (no AnkiConnect, no Anki GUI), and
+writes the snapshot the 3D app loads. Only rewrites when word data changed.
 
-    python3 generate.py
+Run it with the interpreter that has the `anki` library (~/anki-venv on kairi):
+
+    ~/anki-venv/bin/python3 generate.py
 """
 
 from __future__ import annotations
 
 import json
 import math
-import urllib.request
-from datetime import datetime, timezone
+import os
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from anki.collection import Collection
+
 ROOT = Path(__file__).resolve().parent
-ANKI_URL = "http://127.0.0.1:8765"
-DECK = "Korean-lingq"
+DECK = os.environ.get("ANKI_DECK", "Korean-lingq")
+COLLECTION = Path(
+    os.environ.get("ANKI_COLLECTION", "")
+    or Path.home() / ".local/share/Anki2/User 1/collection.anki2"
+).expanduser()
 
 
-def anki(action: str, **params):
-    req = urllib.request.Request(
-        ANKI_URL,
-        data=json.dumps({"action": action, "version": 6, "params": params}).encode(),
-        headers={"Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        payload = json.load(resp)
-    if payload.get("error") is not None:
-        raise RuntimeError(f"AnkiConnect {action}: {payload['error']}")
-    return payload["result"]
+def _deck(extra: str = "") -> str:
+    query = f'deck:"{DECK}"'
+    return f"{query} {extra}".strip() if extra else query
+
+
+def _collection() -> Collection:
+    if not COLLECTION.exists():
+        raise SystemExit(
+            f"no Anki collection at {COLLECTION} — run the one-time AnkiWeb login first"
+        )
+    return Collection(str(COLLECTION))
+
+
+def cards_info(col: Collection) -> list[dict]:
+    """Card state shaped like AnkiConnect's cardsInfo, read from the collection."""
+    leech = set(col.find_cards(_deck("tag:leech")))
+    out: list[dict] = []
+    for cid in col.find_cards(_deck()):
+        card = col.get_card(cid)
+        note = card.note()
+        out.append(
+            {
+                "cardId": cid,
+                "fields": {name: {"value": note[name]} for name in note.keys()},
+                "type": card.type,
+                "queue": card.queue,
+                "interval": card.ivl,
+                "lapses": card.lapses,
+                "leech": cid in leech,
+            }
+        )
+    return out
 
 
 def word_health(card: dict) -> tuple[str, float]:
@@ -48,12 +76,14 @@ def word_health(card: dict) -> tuple[str, float]:
 
 def build_data() -> dict:
     domains_cfg = json.loads((ROOT / "domains.json").read_text(encoding="utf-8"))
-    cards = anki("findCards", query=f"deck:{DECK}")
-    cards_info = anki("cardsInfo", cards=cards)
-    leech_ids = set(anki("findCards", query=f"deck:{DECK} tag:leech"))
+    col = _collection()
+    try:
+        cards = cards_info(col)
+    finally:
+        col.close()
 
     by_term: dict[str, dict] = {}
-    for c in cards_info:
+    for c in cards:
         f = c.get("fields", {})
         term = (f.get("Term") or {}).get("value", "").strip()
         if not term:
@@ -70,7 +100,7 @@ def build_data() -> dict:
             "status": status,
             "interval_days": c.get("interval", 0) if c.get("type", 0) == 2 else 0,
             "lapses": c.get("lapses", 0),
-            "leech": c.get("cardId") in leech_ids,
+            "leech": c["leech"],
             "suspended": c.get("queue", 0) == -1,
             "health": health,
         }
@@ -156,17 +186,45 @@ def build_data() -> dict:
 
 
 def build_review() -> dict:
-    """Review history + scheduling snapshot for the Habits section."""
-    by_day = {d: int(n) for d, n in anki("getNumCardsReviewedByDay")}
-    return {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "by_day": by_day,
-        "today_reviewed": anki("getNumCardsReviewedToday"),
-        "due_now": len(anki("findCards", query=f"deck:{DECK} is:due")),
-        "due_tomorrow": len(anki("findCards", query=f"deck:{DECK} prop:due=1")),
-        "due_7d": len(anki("findCards", query=f"deck:{DECK} prop:due<=7")),
-        "total_cards": len(anki("findCards", query=f"deck:{DECK}")),
-    }
+    """Review history + scheduling snapshot for the Habits section.
+
+    Also carries the "new word" counts the vault app's Korean goal reads, so the
+    goal is fed by whichever machine owns the collection instead of a copy.
+    """
+    col = _collection()
+    try:
+        by_day: dict[str, int] = {}
+        for rid, rtype in col.db.all("select id, type from revlog"):
+            if rtype == 4:  # manual (set due date / forget), not a review
+                continue
+            day = datetime.fromtimestamp(rid / 1000).strftime("%Y-%m-%d")
+            by_day[day] = by_day.get(day, 0) + 1
+
+        new_by_day: dict[str, int] = {}
+        for nid in col.find_notes("tag:lingq-anki"):
+            day = datetime.fromtimestamp(nid / 1000).strftime("%Y-%m-%d")
+            new_by_day[day] = new_by_day.get(day, 0) + 1
+
+        today = datetime.now().strftime("%Y-%m-%d")
+        since_7d = (datetime.now() - timedelta(days=6)).strftime("%Y-%m-%d")
+        monday = (datetime.now() - timedelta(days=datetime.now().weekday())).strftime("%Y-%m-%d")
+        return {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "by_day": by_day,
+            "new_by_day": new_by_day,
+            "today_reviewed": by_day.get(today, 0),
+            "reviews_7d": sum(n for d, n in by_day.items() if d >= since_7d),
+            "new_today": new_by_day.get(today, 0),
+            "new_week": sum(n for d, n in new_by_day.items() if d >= monday),
+            "last_review_day": max(by_day) if by_day else None,
+            "week_start": monday,
+            "due_now": len(col.find_cards(_deck("is:due"))),
+            "due_tomorrow": len(col.find_cards(_deck("prop:due=1"))),
+            "due_7d": len(col.find_cards(_deck("prop:due<=7"))),
+            "total_cards": len(col.find_cards(_deck())),
+        }
+    finally:
+        col.close()
 
 
 def _without_meta(data: dict) -> dict:
